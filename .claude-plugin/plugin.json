@@ -1,0 +1,13 @@
+{
+  "name": "pcg-france",
+  "version": "1.0.0",
+  "description": "Comptabilité française (PCG) : plan comptable 2025 et 2026 (861 comptes), imputation, contrôle de balance et de FEC, résultat, SIG et écritures de clôture.",
+  "author": {
+    "name": "Arnold KOUYA",
+    "email": "arnoldkouya@gmail.com"
+  },
+  "homepage": "https://github.com/arnoldkouya/pcg-skill",
+  "repository": "https://github.com/arnoldkouya/pcg-skill",
+  "license": "MIT",
+  "keywords": ["pcg", "plan-comptable", "comptabilité", "france", "fec", "clôture", "anc"]
+}

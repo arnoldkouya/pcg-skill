@@ -1,0 +1,862 @@
+code,libelle,classe,niveau,parent,systeme,nature,sens_usuel
+1,Comptes de capitaux,1,1,,minimal,bilan,credit
+10,Capital et réserves,1,2,1,minimal,bilan,credit
+101,Capital,1,3,10,minimal,bilan,credit
+1011,Capital souscrit - non appelé,1,4,101,facultatif,bilan,credit
+1012,"Capital souscrit - appelé, non versé",1,4,101,facultatif,bilan,credit
+1013,"Capital souscrit - appelé, versé",1,4,101,facultatif,bilan,credit
+10131,Capital non amorti,1,5,1013,facultatif,bilan,credit
+10132,Capital amorti,1,5,1013,facultatif,bilan,credit
+1018,Capital souscrit soumis à des réglementations particulières,1,4,101,facultatif,bilan,credit
+102,Fonds fiduciaires,1,3,10,facultatif,bilan,credit
+104,Primes liées au capital,1,3,10,minimal,bilan,credit
+1041,Primes d'émission,1,4,104,facultatif,bilan,credit
+1042,Primes de fusion,1,4,104,facultatif,bilan,credit
+1043,Primes d'apport,1,4,104,facultatif,bilan,credit
+1044,Primes de conversion d'obligations en actions,1,4,104,facultatif,bilan,credit
+1045,Bons de souscription de titres en capital,1,4,104,facultatif,bilan,credit
+105,Écarts de réévaluation,1,3,10,minimal,bilan,credit
+106,Réserves,1,3,10,minimal,bilan,credit
+1061,Réserve légale,1,4,106,minimal,bilan,credit
+1062,Réserves indisponibles,1,4,106,minimal,bilan,credit
+1063,Réserves statutaires ou contractuelles,1,4,106,minimal,bilan,credit
+1064,Réserves réglementées,1,4,106,minimal,bilan,credit
+1068,Autres réserves,1,4,106,minimal,bilan,credit
+107,Écart d'équivalence,1,3,10,minimal,bilan,credit
+108,Compte de l'exploitant,1,3,10,minimal,bilan,mixte
+109,Actionnaires : capital souscrit - non appelé,1,3,10,minimal,bilan,debit
+11,Report à nouveau,1,2,1,minimal,bilan,mixte
+110,Report à nouveau - solde créditeur,1,3,11,minimal,bilan,credit
+119,Report à nouveau - solde débiteur,1,3,11,minimal,bilan,debit
+12,Résultat de l'exercice,1,2,1,minimal,bilan,mixte
+120,Résultat de l'exercice - bénéfice,1,3,12,minimal,bilan,credit
+1209,Acomptes sur dividendes,1,4,120,facultatif,bilan,credit
+129,Résultat de l'exercice – perte,1,3,12,minimal,bilan,debit
+13,Subventions d'investissement,1,2,1,minimal,bilan,credit
+131,Subventions d'investissement octroyées,1,3,13,minimal,bilan,credit
+139,Subventions d'investissement inscrites au compte de résultat,1,3,13,minimal,bilan,debit
+14,Provisions réglementées,1,2,1,minimal,bilan,credit
+143,Provisions réglementées pour hausse de prix,1,3,14,minimal,bilan,credit
+145,Amortissements dérogatoires,1,3,14,minimal,bilan,credit
+148,Autres provisions réglementées,1,3,14,minimal,bilan,credit
+15,Provisions,1,2,1,minimal,bilan,credit
+151,Provisions pour risques,1,3,15,minimal,bilan,credit
+1511,Provisions pour litiges,1,4,151,facultatif,bilan,credit
+1512,Provisions pour garanties données aux clients,1,4,151,facultatif,bilan,credit
+1514,Provisions pour amendes et pénalités,1,4,151,facultatif,bilan,credit
+1515,Provisions pour pertes de change,1,4,151,facultatif,bilan,credit
+1516,Provisions pour pertes sur contrats,1,4,151,facultatif,bilan,credit
+1518,Autres provisions pour risques,1,4,151,facultatif,bilan,credit
+152,Provisions pour charges,1,3,15,minimal,bilan,credit
+1521,Provisions pour pensions et obligations similaires,1,4,152,facultatif,bilan,credit
+1522,Provisions pour restructurations,1,4,152,facultatif,bilan,credit
+1523,Provisions pour impôts,1,4,152,facultatif,bilan,credit
+1524,Provisions pour renouvellement des immobilisations - entreprises concessionnaires,1,4,152,facultatif,bilan,credit
+1525,Provisions pour gros entretien ou grandes révisions,1,4,152,facultatif,bilan,credit
+1526,Provisions pour remise en état,1,4,152,facultatif,bilan,credit
+1527,Autres provisions pour charges,1,4,152,facultatif,bilan,credit
+16,"Emprunts et dettes assimilées, fonds non remboursables et avances conditionnées",1,2,1,minimal,bilan,credit
+161,Emprunts obligataires convertibles si non-inscrits dans le compte 167,1,3,16,minimal,bilan,credit
+1618,Intérêts courus sur emprunts obligataires convertibles,1,4,161,facultatif,bilan,credit
+162,Obligations représentatives de passifs nets remis en fiducie si non-inscrites dans le compte 167,1,3,16,minimal,bilan,credit
+163,Autres emprunts obligataires si non-inscrits dans le compte 167,1,3,16,minimal,bilan,credit
+1638,Intérêts courus sur autres emprunts obligataires,1,4,163,facultatif,bilan,credit
+164,Emprunts auprès des établissements de crédit si non-inscrits dans le compte 167,1,3,16,minimal,bilan,credit
+1648,Intérêts courus sur emprunts auprès des établissements de crédit,1,4,164,facultatif,bilan,credit
+165,Dépôts et cautionnements reçus,1,3,16,minimal,bilan,credit
+1651,Dépôts,1,4,165,facultatif,bilan,credit
+1655,Cautionnements,1,4,165,facultatif,bilan,credit
+1658,Intérêts courus sur dépôts et cautionnements reçus,1,4,165,facultatif,bilan,credit
+166,Participation des salariés aux résultats,1,3,16,minimal,bilan,credit
+1661,Comptes bloqués,1,4,166,facultatif,bilan,credit
+1662,Fonds de participation,1,4,166,facultatif,bilan,credit
+1668,Intérêts courus sur participation des salariés aux résultats,1,4,166,facultatif,bilan,credit
+167,Fonds non remboursables et avances conditionnées,1,3,16,minimal,bilan,credit
+1671,Fonds non remboursables montant principal,1,4,167,minimal,bilan,credit
+16711,Titres participatifs montant principal,1,5,1671,facultatif,bilan,credit
+16712,Autres fonds non remboursables montant principal,1,5,1671,facultatif,bilan,credit
+1673,Avances conditionnées montant principal,1,4,167,minimal,bilan,credit
+1674,Avances conditionnées intérêts courus,1,4,167,minimal,bilan,credit
+168,Autres emprunts et dettes assimilées,1,3,16,minimal,bilan,credit
+1681,Autres emprunts,1,4,168,facultatif,bilan,credit
+1682,Emprunts participatifs,1,4,168,facultatif,bilan,credit
+1685,Rentes viagères capitalisées,1,4,168,facultatif,bilan,credit
+1687,Autres dettes,1,4,168,facultatif,bilan,credit
+1688,Intérêts courus sur autres emprunts et dettes assimilées,1,4,168,facultatif,bilan,credit
+169,Primes de remboursement des emprunts,1,3,16,minimal,bilan,debit
+17,Dettes rattachées à des participations,1,2,1,minimal,bilan,credit
+171,Dettes rattachées à des participations - groupe,1,3,17,facultatif,bilan,credit
+174,Dettes rattachées à des participations - hors groupe,1,3,17,facultatif,bilan,credit
+178,Dettes rattachées à des sociétés en participation,1,3,17,facultatif,bilan,credit
+18,Comptes de liaison des établissements et sociétés en participation,1,2,1,minimal,bilan,mixte
+181,Comptes de liaison des établissements,1,3,18,facultatif,bilan,mixte
+186,Biens et prestations de services échangés entre établissements - charges,1,3,18,facultatif,bilan,mixte
+187,Biens et prestations de services échangés entre établissements - produits,1,3,18,facultatif,bilan,mixte
+188,Comptes de liaison des sociétés en participation,1,3,18,facultatif,bilan,mixte
+2,Comptes d'immobilisations,2,1,,minimal,bilan,debit
+20,Immobilisations incorporelles et frais d’établissement,2,2,2,minimal,bilan,debit
+201,Frais d'établissement,2,3,20,minimal,bilan,debit
+2011,Frais de constitution,2,4,201,facultatif,bilan,debit
+2012,Frais de premier établissement,2,4,201,facultatif,bilan,debit
+20121,Frais de prospection,2,5,2012,facultatif,bilan,debit
+20122,Frais de publicité,2,5,2012,facultatif,bilan,debit
+2013,"Frais d'augmentation de capital et d'opérations diverses - fusions, scissions, transformations",2,4,201,facultatif,bilan,debit
+203,Frais de développement,2,3,20,minimal,bilan,debit
+205,"Concessions et droits similaires, brevets, licences, marques, procédés, solutions informatiques, droits et valeurs similaires",2,3,20,minimal,bilan,debit
+206,Droit au bail,2,3,20,minimal,bilan,debit
+207,Fonds commercial,2,3,20,minimal,bilan,debit
+208,Autres immobilisations incorporelles,2,3,20,minimal,bilan,debit
+2081,Mali de fusion sur actifs incorporels,2,4,208,facultatif,bilan,debit
+21,Immobilisations corporelles,2,2,2,minimal,bilan,debit
+211,Terrains,2,3,21,minimal,bilan,debit
+2111,Terrains nus,2,4,211,facultatif,bilan,debit
+2112,Terrains aménagés,2,4,211,facultatif,bilan,debit
+2113,Sous-sols et sur-sols,2,4,211,facultatif,bilan,debit
+2114,Terrains de carrières (Tréfonds),2,4,211,facultatif,bilan,debit
+2115,Terrains bâtis,2,4,211,facultatif,bilan,debit
+212,Agencements et aménagements de terrains (même ventilation que celle du compte 211),2,3,21,minimal,bilan,debit
+213,Constructions,2,3,21,minimal,bilan,debit
+2131,Bâtiments,2,4,213,facultatif,bilan,debit
+2135,Installations générales - agencements - aménagements des constructions,2,4,213,facultatif,bilan,debit
+2138,Ouvrages d'infrastructure,2,4,213,facultatif,bilan,debit
+214,Constructions sur sol d'autrui (même ventilation que celle du compte 213),2,3,21,minimal,bilan,debit
+215,"Installations techniques, matériels et outillages industriels",2,3,21,minimal,bilan,debit
+2151,Installations complexes spécialisées,2,4,215,facultatif,bilan,debit
+21511,Installations complexes spécialisées sur sol propre,2,5,2151,facultatif,bilan,debit
+21514,Installations complexes spécialisées sur sol d'autrui,2,5,2151,facultatif,bilan,debit
+2153,Installations à caractère spécifique,2,4,215,facultatif,bilan,debit
+21531,Installations à caractère spécifique sur sol propre,2,5,2153,facultatif,bilan,debit
+21534,Installations à caractère spécifique sur sol d'autrui,2,5,2153,facultatif,bilan,debit
+2154,Matériels industriels,2,4,215,facultatif,bilan,debit
+2155,Outillages industriels,2,4,215,facultatif,bilan,debit
+2157,Agencements et aménagements des matériels et outillages industriels,2,4,215,facultatif,bilan,debit
+218,Autres immobilisations corporelles,2,3,21,minimal,bilan,debit
+2181,"Installations générales, agencements, aménagements divers",2,4,218,facultatif,bilan,debit
+2182,Matériel de transport,2,4,218,facultatif,bilan,debit
+2183,Matériel de bureau et matériel informatique,2,4,218,facultatif,bilan,debit
+2184,Mobilier,2,4,218,facultatif,bilan,debit
+2185,Cheptel,2,4,218,facultatif,bilan,debit
+2186,Emballages récupérables,2,4,218,facultatif,bilan,debit
+2187,Mali de fusion sur actifs corporels,2,4,218,facultatif,bilan,debit
+22,Immobilisations mises en concession,2,2,2,minimal,bilan,debit
+229,Droits du concédant (présentés dans la rubrique autres fonds propres),2,3,22,minimal,bilan,debit
+23,"Immobilisations en cours, avances et acomptes",2,2,2,minimal,bilan,debit
+231,Immobilisations corporelles en cours,2,3,23,minimal,bilan,debit
+232,Immobilisations incorporelles en cours,2,3,23,minimal,bilan,debit
+237,Avances et acomptes versés sur commandes d'immobilisations incorporelles,2,3,23,minimal,bilan,debit
+238,Avances et acomptes versés sur commandes d'immobilisations corporelles,2,3,23,minimal,bilan,debit
+26,Participations et créances rattachées à des participations,2,2,2,minimal,bilan,debit
+261,Titres de participation,2,3,26,minimal,bilan,debit
+2611,Actions,2,4,261,facultatif,bilan,debit
+2618,Autres titres,2,4,261,facultatif,bilan,debit
+262,Titres évalués par équivalence,2,3,26,minimal,bilan,debit
+266,Autres formes de participation,2,3,26,minimal,bilan,debit
+2661,Droits représentatifs d'actifs nets remis en fiducie,2,4,266,facultatif,bilan,debit
+267,Créances rattachées à des participations,2,3,26,minimal,bilan,debit
+2671,Créances rattachées à des participations - groupe,2,4,267,facultatif,bilan,debit
+2674,Créances rattachées à des participations - hors groupe,2,4,267,facultatif,bilan,debit
+2675,Versements représentatifs d'apports non capitalisés - appel de fonds,2,4,267,facultatif,bilan,debit
+2676,Avances consolidables,2,4,267,facultatif,bilan,debit
+2677,Autres créances rattachées à des participations,2,4,267,facultatif,bilan,debit
+2678,Intérêts courus,2,4,267,facultatif,bilan,debit
+268,Créances rattachées à des sociétés en participation,2,3,26,minimal,bilan,debit
+2681,Principal,2,4,268,facultatif,bilan,debit
+2688,Intérêts courus,2,4,268,facultatif,bilan,debit
+269,Versements restant à effectuer sur titres de participation non libérés,2,3,26,minimal,bilan,debit
+27,Autres immobilisations financières,2,2,2,minimal,bilan,debit
+271,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille (droit de propriété),2,3,27,minimal,bilan,debit
+2711,Actions,2,4,271,facultatif,bilan,debit
+2718,Autres titres,2,4,271,facultatif,bilan,debit
+272,Titres immobilisés (droit de créance),2,3,27,minimal,bilan,debit
+2721,Obligations,2,4,272,facultatif,bilan,debit
+2722,Bons,2,4,272,facultatif,bilan,debit
+273,Titres immobilisés de l'activité de portefeuille,2,3,27,minimal,bilan,debit
+274,Prêts,2,3,27,minimal,bilan,debit
+2741,Prêts participatifs,2,4,274,facultatif,bilan,debit
+2742,Prêts aux associés,2,4,274,facultatif,bilan,debit
+2743,Prêts au personnel,2,4,274,facultatif,bilan,debit
+2748,Autres prêts,2,4,274,facultatif,bilan,debit
+275,Dépôts et cautionnements versés,2,3,27,minimal,bilan,debit
+2751,Dépôts,2,4,275,facultatif,bilan,debit
+2755,Cautionnements,2,4,275,facultatif,bilan,debit
+276,Autres créances immobilisées,2,3,27,minimal,bilan,debit
+2761,Créances diverses,2,4,276,minimal,bilan,debit
+2768,Intérêts courus,2,4,276,minimal,bilan,debit
+27682,Intérêts courus sur titres immobilisés (droit de créance),2,5,2768,minimal,bilan,debit
+27684,Intérêts courus sur prêts,2,5,2768,minimal,bilan,debit
+27685,Intérêts courus sur dépôts et cautionnements,2,5,2768,minimal,bilan,debit
+27688,Intérêts courus sur créances diverses,2,5,2768,minimal,bilan,debit
+277,Actions propres ou parts propres,2,3,27,minimal,bilan,debit
+2771,Actions propres ou parts propres,2,4,277,facultatif,bilan,debit
+2772,Actions propres ou parts propres en voie d’annulation,2,4,277,facultatif,bilan,debit
+278,Mali de fusion sur actifs financiers,2,3,27,facultatif,bilan,debit
+279,Versements restant à effectuer sur titres immobilisés non libérés,2,3,27,minimal,bilan,debit
+28,Amortissements des immobilisations,2,2,2,minimal,bilan,credit
+280,Amortissements des immobilisations incorporelles et des frais d’établissement (même ventilation que celle du compte 20),2,3,28,minimal,bilan,credit
+2801,Frais d'établissement (même ventilation que celle du compte 201),2,4,280,minimal,bilan,credit
+2803,Frais de développement,2,4,280,minimal,bilan,credit
+2805,"Concessions et droits similaires, brevets, licences, solutions informatiques, droits et valeurs similaires",2,4,280,minimal,bilan,credit
+2806,Droit au bail,2,4,280,minimal,bilan,credit
+2807,Fonds commercial,2,4,280,minimal,bilan,credit
+2808,Autres immobilisations incorporelles,2,4,280,minimal,bilan,credit
+281,Amortissements des immobilisations corporelles (même ventilation que celle du compte 21),2,3,28,minimal,bilan,credit
+2812,"Agencements, aménagements de terrains (même ventilation que celle du compte 212)",2,4,281,minimal,bilan,credit
+2813,Constructions (même ventilation que celle du compte 213),2,4,281,minimal,bilan,credit
+2814,Constructions sur sol d'autrui (même ventilation que celle du compte 214),2,4,281,minimal,bilan,credit
+2815,"Installations, matériel et outillage industriels (même ventilation que celle du compte 215)",2,4,281,minimal,bilan,credit
+2818,Autres immobilisations corporelles (même ventilation que celle du compte 218),2,4,281,minimal,bilan,credit
+28187,Amortissement du mali de fusion sur actifs corporels,2,5,2818,facultatif,bilan,credit
+282,Amortissements des immobilisations mises en concession,2,3,28,minimal,bilan,credit
+29,Dépréciations des immobilisations,2,2,2,minimal,bilan,credit
+290,Dépréciations des immobilisations incorporelles,2,3,29,minimal,bilan,credit
+2901,Frais d’établissement,2,4,290,minimal,bilan,credit
+2903,Frais de développement,2,4,290,minimal,bilan,credit
+2905,"Marques, procédés, droits et valeurs similaires",2,4,290,minimal,bilan,credit
+2906,Droit au bail,2,4,290,minimal,bilan,credit
+2907,Fonds commercial,2,4,290,minimal,bilan,credit
+2908,Autres immobilisations incorporelles,2,4,290,minimal,bilan,credit
+29081,Dépréciation du mali de fusion sur actifs incorporels,2,5,2908,facultatif,bilan,credit
+291,Dépréciations des immobilisations corporelles,2,3,29,minimal,bilan,credit
+2911,Terrains,2,4,291,minimal,bilan,credit
+2912,Agencements et aménagements de terrains,2,4,291,minimal,bilan,credit
+2913,Constructions,2,4,291,minimal,bilan,credit
+2914,Constructions sur sol d'autrui,2,4,291,minimal,bilan,credit
+2915,"Installations techniques, matériels et outillages industriels",2,4,291,minimal,bilan,credit
+2918,Autres immobilisations corporelles,2,4,291,minimal,bilan,credit
+29187,Dépréciation du mali de fusion sur actifs corporels,2,5,2918,facultatif,bilan,credit
+292,Dépréciations des immobilisations mises en concession,2,3,29,minimal,bilan,credit
+293,Dépréciations des immobilisations en cours,2,3,29,minimal,bilan,credit
+2931,Immobilisations corporelles en cours,2,4,293,minimal,bilan,credit
+2932,Immobilisations incorporelles en cours,2,4,293,minimal,bilan,credit
+296,Dépréciations des participations et créances rattachées à des participations,2,3,29,minimal,bilan,credit
+2961,Titres de participation,2,4,296,minimal,bilan,credit
+2962,Titres évalués par équivalence,2,4,296,minimal,bilan,credit
+2966,Autres formes de participation,2,4,296,minimal,bilan,credit
+2967,Créances rattachées à des participations (même ventilation que celle du compte 267),2,4,296,minimal,bilan,credit
+2968,Créances rattachées à des sociétés en participation (même ventilation que celle du compte 268),2,4,296,minimal,bilan,credit
+297,Dépréciations des autres immobilisations financières,2,3,29,minimal,bilan,credit
+2971,Titres immobilisés autres que les titres immobilisés de l'activité de portefeuille (droit de propriété),2,4,297,minimal,bilan,credit
+2972,Titres immobilisés (droit de créance),2,4,297,minimal,bilan,credit
+2973,Titres immobilisés de l'activité de portefeuille,2,4,297,minimal,bilan,credit
+2974,Prêts,2,4,297,minimal,bilan,credit
+2975,Dépôts et cautionnements versés,2,4,297,minimal,bilan,credit
+2976,Autres créances immobilisées,2,4,297,minimal,bilan,credit
+3,Comptes de stocks et en-cours,3,1,,minimal,bilan,debit
+31,Matières premières et fournitures,3,2,3,minimal,bilan,debit
+32,Autres approvisionnements,3,2,3,minimal,bilan,debit
+321,Matières consommables,3,3,32,minimal,bilan,debit
+322,Fournitures consommables,3,3,32,minimal,bilan,debit
+3221,Combustibles,3,4,322,facultatif,bilan,debit
+3222,Produits d'entretien,3,4,322,facultatif,bilan,debit
+3223,Fournitures d'atelier et d'usine,3,4,322,facultatif,bilan,debit
+3224,Fournitures de magasin,3,4,322,facultatif,bilan,debit
+3225,Fournitures de bureau,3,4,322,facultatif,bilan,debit
+326,Emballages,3,3,32,minimal,bilan,debit
+3261,Emballages perdus,3,4,326,facultatif,bilan,debit
+3265,Emballages récupérables non identifiables,3,4,326,facultatif,bilan,debit
+3267,Emballages à usage mixte,3,4,326,facultatif,bilan,debit
+33,En-cours de production de biens,3,2,3,minimal,bilan,debit
+331,Produits en cours,3,3,33,minimal,bilan,debit
+335,Travaux en cours,3,3,33,minimal,bilan,debit
+34,En-cours de production de services,3,2,3,minimal,bilan,debit
+341,Études en cours,3,3,34,minimal,bilan,debit
+345,Prestations de services en cours,3,3,34,minimal,bilan,debit
+35,Stocks de produits,3,2,3,minimal,bilan,debit
+351,Produits intermédiaires,3,3,35,minimal,bilan,debit
+355,Produits finis,3,3,35,minimal,bilan,debit
+358,Produits résiduels ou matières de récupération,3,3,35,minimal,bilan,debit
+3581,Déchets,3,4,358,facultatif,bilan,debit
+3585,Rebuts,3,4,358,facultatif,bilan,debit
+3586,Matières de récupération,3,4,358,facultatif,bilan,debit
+36,"(Compte à ouvrir, le cas échéant, sous l'intitulé « Stocks provenant d'immobilisations »)",3,2,3,minimal,bilan,debit
+37,Stocks de marchandises,3,2,3,minimal,bilan,debit
+38,"(Le compte 38 peut être utilisé pour comptabiliser les stocks en voie d'acheminement, mis en dépôt ou donnés en consignation)",3,2,3,minimal,bilan,debit
+39,Dépréciations des stocks et en-cours,3,2,3,minimal,bilan,credit
+391,Dépréciations des matières premières et fournitures,3,3,39,minimal,bilan,credit
+392,Dépréciations des autres approvisionnements,3,3,39,minimal,bilan,credit
+393,Dépréciations des en-cours de production de biens,3,3,39,minimal,bilan,credit
+394,Dépréciations des en-cours de production de services,3,3,39,minimal,bilan,credit
+395,Dépréciations des stocks de produits,3,3,39,minimal,bilan,credit
+397,Dépréciations des stocks de marchandises,3,3,39,minimal,bilan,credit
+4,Comptes de tiers,4,1,,minimal,bilan,mixte
+40,Fournisseurs et comptes rattachés,4,2,4,minimal,bilan,credit
+401,Fournisseurs,4,3,40,minimal,bilan,credit
+4011,Fournisseurs - Achats de biens et prestations de services,4,4,401,facultatif,bilan,credit
+4017,Fournisseurs - Retenues de garantie,4,4,401,facultatif,bilan,credit
+403,Fournisseurs - Effets à payer,4,3,40,minimal,bilan,credit
+404,Fournisseurs d'immobilisations,4,3,40,minimal,bilan,credit
+4041,Fournisseurs - Achats d'immobilisations,4,4,404,facultatif,bilan,credit
+4047,Fournisseurs d'immobilisations - Retenues de garantie,4,4,404,facultatif,bilan,credit
+405,Fournisseurs d'immobilisations - Effets à payer,4,3,40,minimal,bilan,credit
+408,Fournisseurs - Factures non parvenues,4,3,40,minimal,bilan,credit
+4081,Fournisseurs,4,4,408,minimal,bilan,credit
+4084,Fournisseurs d'immobilisations,4,4,408,minimal,bilan,credit
+4088,Fournisseurs - Intérêts courus,4,4,408,minimal,bilan,credit
+409,Fournisseurs débiteurs,4,3,40,minimal,bilan,debit
+4091,Fournisseurs - Avances et acomptes versés sur commandes,4,4,409,minimal,bilan,debit
+4096,Fournisseurs - Créances pour emballages et matériel à rendre,4,4,409,minimal,bilan,debit
+4097,Fournisseurs - Autres avoirs,4,4,409,minimal,bilan,debit
+40971,Fournisseurs d'exploitation,4,5,4097,facultatif,bilan,debit
+40974,Fournisseurs d'immobilisations,4,5,4097,facultatif,bilan,debit
+4098,"Rabais, remises, ristournes à obtenir et autres avoirs non encore reçus",4,4,409,minimal,bilan,debit
+41,Clients et comptes rattachés,4,2,4,minimal,bilan,debit
+411,Clients,4,3,41,minimal,bilan,debit
+4111,Clients - Ventes de biens ou de prestations de services,4,4,411,facultatif,bilan,debit
+4117,Clients - Retenues de garantie,4,4,411,facultatif,bilan,debit
+413,Clients - Effets à recevoir,4,3,41,minimal,bilan,debit
+416,Clients douteux ou litigieux,4,3,41,minimal,bilan,debit
+418,Clients - Produits non encore facturés,4,3,41,minimal,bilan,debit
+4181,Clients - Factures à établir,4,4,418,facultatif,bilan,debit
+4188,Clients - Intérêts courus,4,4,418,facultatif,bilan,debit
+419,Clients créditeurs,4,3,41,minimal,bilan,credit
+4191,Clients - Avances et acomptes reçus sur commandes,4,4,419,minimal,bilan,credit
+4196,Clients - Dettes sur emballages et matériels consignés,4,4,419,minimal,bilan,credit
+4197,Clients - Autres avoirs,4,4,419,minimal,bilan,credit
+4198,"Rabais, remises, ristournes à accorder et autres avoirs à établir",4,4,419,minimal,bilan,credit
+42,Personnel et comptes rattachés,4,2,4,minimal,bilan,mixte
+421,Personnel - Rémunérations dues,4,3,42,minimal,bilan,mixte
+422,Comité social et économique,4,3,42,minimal,bilan,mixte
+424,Participation des salariés aux résultats,4,3,42,minimal,bilan,mixte
+4246,Réserve spéciale,4,4,424,facultatif,bilan,mixte
+4248,Comptes courants,4,4,424,facultatif,bilan,mixte
+425,Personnel - Avances et acomptes et autres comptes débiteurs,4,3,42,minimal,bilan,mixte
+426,Personnel - Dépôts,4,3,42,minimal,bilan,mixte
+427,Personnel - Oppositions,4,3,42,minimal,bilan,mixte
+428,Personnel - Charges à payer,4,3,42,minimal,bilan,mixte
+4282,Dettes provisionnées pour congés à payer,4,4,428,facultatif,bilan,mixte
+4284,Dettes provisionnées pour participation des salariés aux résultats,4,4,428,facultatif,bilan,mixte
+4286,Autres charges à payer,4,4,428,facultatif,bilan,mixte
+43,Sécurité sociale et autres organismes sociaux,4,2,4,minimal,bilan,mixte
+431,Sécurité sociale,4,3,43,minimal,bilan,mixte
+437,Autres organismes sociaux,4,3,43,minimal,bilan,mixte
+438,Organismes sociaux - Charges à payer,4,3,43,minimal,bilan,mixte
+4382,Charges sociales sur congés à payer,4,4,438,facultatif,bilan,mixte
+4386,Autres charges à payer,4,4,438,facultatif,bilan,mixte
+439,Organismes sociaux - Produits à recevoir,4,3,43,minimal,bilan,mixte
+44,État et autres collectivités publiques,4,2,4,minimal,bilan,mixte
+441,État - Subventions et aides à recevoir,4,3,44,minimal,bilan,mixte
+442,"Contributions, impôts et taxes recouvrés pour le compte de l'État",4,3,44,minimal,bilan,mixte
+4421,Prélèvements à la source (Impôt sur le revenu),4,4,442,facultatif,bilan,mixte
+4422,Prélèvements forfaitaires non libératoires,4,4,442,facultatif,bilan,mixte
+4423,Retenues et prélèvements sur les distributions,4,4,442,facultatif,bilan,mixte
+444,État - Impôts sur les bénéfices,4,3,44,minimal,bilan,mixte
+445,État - Taxes sur le chiffre d'affaires,4,3,44,minimal,bilan,mixte
+4452,TVA due intracommunautaire,4,4,445,minimal,bilan,mixte
+4455,Taxes sur le chiffre d'affaires à décaisser,4,4,445,minimal,bilan,credit
+44551,TVA à décaisser,4,5,4455,facultatif,bilan,credit
+44558,Taxes assimilées à la TVA,4,5,4455,facultatif,bilan,credit
+4456,Taxes sur le chiffre d'affaires déductibles,4,4,445,minimal,bilan,debit
+44562,TVA sur immobilisations,4,5,4456,facultatif,bilan,debit
+44563,TVA transférée par d'autres entités,4,5,4456,facultatif,bilan,debit
+44566,TVA sur autres biens et services,4,5,4456,facultatif,bilan,debit
+44567,Crédit de TVA à reporter,4,5,4456,facultatif,bilan,debit
+44568,Taxes assimilées à la TVA,4,5,4456,facultatif,bilan,debit
+4457,Taxes sur le chiffre d'affaires collectées,4,4,445,minimal,bilan,credit
+44571,TVA collectée,4,5,4457,facultatif,bilan,credit
+44578,Taxes assimilées à la TVA,4,5,4457,facultatif,bilan,credit
+4458,Taxes sur le chiffre d'affaires à régulariser ou en attente,4,4,445,minimal,bilan,mixte
+44581,Acomptes - Régime simplifié d'imposition,4,5,4458,facultatif,bilan,mixte
+44583,Remboursement de taxes sur le chiffre d'affaires demandé,4,5,4458,facultatif,bilan,mixte
+44584,TVA récupérée d’avance,4,5,4458,facultatif,bilan,mixte
+44586,Taxes sur le chiffre d’affaires sur factures non parvenues,4,5,4458,facultatif,bilan,mixte
+44587,Taxes sur le chiffre d’affaires sur factures à établir,4,5,4458,facultatif,bilan,mixte
+446,Obligations cautionnées,4,3,44,minimal,bilan,mixte
+447,"Autres impôts, taxes et versements assimilés",4,3,44,minimal,bilan,mixte
+448,État - Charges à payer et produits à recevoir,4,3,44,minimal,bilan,mixte
+4481,État - Charges à Payer,4,4,448,minimal,bilan,mixte
+44811,Charges fiscales sur congés à payer,4,5,4481,facultatif,bilan,mixte
+44812,Charges à payer,4,5,4481,facultatif,bilan,mixte
+4482,État - Produits à recevoir,4,4,448,minimal,bilan,mixte
+449,Quotas d’émission à acquérir,4,3,44,facultatif,bilan,mixte
+45,Groupe et associés,4,2,4,minimal,bilan,mixte
+451,Groupe,4,3,45,minimal,bilan,mixte
+455,Associés - Comptes courants,4,3,45,minimal,bilan,mixte
+4551,Principal,4,4,455,facultatif,bilan,mixte
+4558,Intérêts courus,4,4,455,facultatif,bilan,mixte
+456,Associés - Opérations sur le capital,4,3,45,minimal,bilan,mixte
+4561,Associés - Comptes d'apport en société,4,4,456,facultatif,bilan,mixte
+45611,Apports en nature,4,5,4561,facultatif,bilan,mixte
+45615,Apports en numéraire,4,5,4561,facultatif,bilan,mixte
+4562,"Apporteurs - Capital appelé, non versé",4,4,456,minimal,bilan,mixte
+45621,"Actionnaires - Capital souscrit et appelé, non versé",4,5,4562,facultatif,bilan,mixte
+45625,"Associés - Capital appelé, non versé",4,5,4562,facultatif,bilan,mixte
+4563,Associés - Versements reçus sur augmentation de capital,4,4,456,facultatif,bilan,mixte
+4564,Associés - Versements anticipés,4,4,456,facultatif,bilan,mixte
+4566,Actionnaires défaillants,4,4,456,facultatif,bilan,mixte
+4567,Associés - Capital à rembourser,4,4,456,facultatif,bilan,mixte
+457,Associés - Dividendes à payer,4,3,45,minimal,bilan,mixte
+458,Associés - Opérations faites en commun et en GIE,4,3,45,minimal,bilan,mixte
+4581,Opérations courantes,4,4,458,facultatif,bilan,mixte
+4588,Intérêts courus,4,4,458,facultatif,bilan,mixte
+46,Débiteurs divers et créditeurs divers,4,2,4,minimal,bilan,mixte
+462,Créances sur cessions d'immobilisations,4,3,46,minimal,bilan,mixte
+464,Dettes sur acquisitions de valeurs mobilières de placement,4,3,46,minimal,bilan,mixte
+465,Créances sur cessions de valeurs mobilières de placement,4,3,46,minimal,bilan,mixte
+467,Divers comptes débiteurs et produits à recevoir,4,3,46,minimal,bilan,mixte
+468,Divers comptes créditeurs et charges à payer,4,3,46,minimal,bilan,mixte
+47,Comptes transitoires ou d'attente,4,2,4,minimal,bilan,mixte
+471,Comptes d'attente,4,3,47,facultatif,bilan,mixte
+472,Comptes d'attente,4,3,47,facultatif,bilan,mixte
+473,Comptes d'attente,4,3,47,facultatif,bilan,mixte
+474,Différences d’évaluation – Actif,4,3,47,minimal,bilan,mixte
+4741,Différences d'évaluation sur instruments financiers à terme - Actif,4,4,474,facultatif,bilan,mixte
+4742,Différences d'évaluation sur jetons détenus - Actif,4,4,474,facultatif,bilan,mixte
+4746,Différences d’évaluation de jetons sur des passifs - Actif,4,4,474,facultatif,bilan,mixte
+475,Différences d’évaluation – Passif,4,3,47,minimal,bilan,mixte
+4751,Différences d'évaluation sur instruments financiers à terme - Passif,4,4,475,facultatif,bilan,mixte
+4752,Différences d'évaluation sur jetons détenus - Passif,4,4,475,facultatif,bilan,mixte
+4756,Différences d’évaluation de jetons sur des passifs - Passif,4,4,475,facultatif,bilan,mixte
+476,Différence de conversion - Actif,4,3,47,minimal,bilan,mixte
+4761,Diminution des créances,4,4,476,facultatif,bilan,mixte
+4762,Augmentation des dettes,4,4,476,facultatif,bilan,mixte
+4768,Différences compensées par couverture de change,4,4,476,facultatif,bilan,mixte
+477,Différences de conversion - Passif,4,3,47,minimal,bilan,mixte
+4771,Augmentation des créances,4,4,477,facultatif,bilan,mixte
+4772,Diminution des dettes,4,4,477,facultatif,bilan,mixte
+4778,Différences compensées par couverture de change,4,4,477,facultatif,bilan,mixte
+478,Autres comptes transitoires,4,3,47,minimal,bilan,mixte
+4781,Mali de fusion sur actif circulant,4,4,478,facultatif,bilan,mixte
+48,Comptes de régularisation,4,2,4,minimal,bilan,mixte
+481,Frais d’émission des emprunts,4,3,48,minimal,bilan,mixte
+486,Charges constatées d'avance,4,3,48,minimal,bilan,debit
+487,Produits constatés d'avance,4,3,48,minimal,bilan,credit
+4871,Produits constatés d’avance sur jetons émis,4,4,487,facultatif,bilan,credit
+488,Comptes de répartition périodique des charges et des produits,4,3,48,facultatif,bilan,mixte
+4886,Charges,4,4,488,facultatif,bilan,mixte
+4887,Produits,4,4,488,facultatif,bilan,mixte
+49,Dépréciations des comptes de tiers,4,2,4,minimal,bilan,credit
+491,Dépréciations des comptes de clients,4,3,49,minimal,bilan,credit
+495,Dépréciations des comptes du groupe et des associés,4,3,49,minimal,bilan,credit
+4951,Comptes du groupe,4,4,495,facultatif,bilan,credit
+4955,Comptes courants des associés,4,4,495,facultatif,bilan,credit
+4958,Opérations faites en commun et en GIE,4,4,495,facultatif,bilan,credit
+496,Dépréciations des comptes de débiteurs divers,4,3,49,minimal,bilan,credit
+4962,Créances sur cessions d'immobilisations,4,4,496,facultatif,bilan,credit
+4965,Créances sur cessions de valeurs mobilières de placement,4,4,496,facultatif,bilan,credit
+4967,Autres comptes débiteurs,4,4,496,facultatif,bilan,credit
+5,Comptes financiers,5,1,,minimal,bilan,debit
+50,Valeurs mobilières de placement,5,2,5,minimal,bilan,debit
+502,Actions propres,5,3,50,minimal,bilan,debit
+5021,Actions destinées à être attribuées aux employés et affectées à des plans déterminés,5,4,502,facultatif,bilan,debit
+5022,Actions disponibles pour être attribuées aux employés ou pour la régularisation des cours de bourse,5,4,502,facultatif,bilan,debit
+503,Actions,5,3,50,minimal,bilan,debit
+5031,Titres cotés,5,4,503,facultatif,bilan,debit
+5035,Titres non cotés,5,4,503,facultatif,bilan,debit
+504,Autres titres conférant un droit de propriété,5,3,50,minimal,bilan,debit
+505,Obligations et bons émis par la société et rachetés par elle,5,3,50,minimal,bilan,debit
+506,Obligations,5,3,50,minimal,bilan,debit
+5061,Titres cotés,5,4,506,facultatif,bilan,debit
+5065,Titres non cotés,5,4,506,facultatif,bilan,debit
+507,Bons du Trésor et bons de caisse à court terme,5,3,50,minimal,bilan,debit
+508,Autres valeurs mobilières de placement et autres créances assimilées,5,3,50,minimal,bilan,debit
+5081,Autres valeurs mobilières,5,4,508,facultatif,bilan,debit
+5082,Bons de souscription,5,4,508,facultatif,bilan,debit
+5088,"Intérêts courus sur obligations, bons et valeurs assimilés",5,4,508,facultatif,bilan,debit
+509,Versements restant à effectuer sur valeurs mobilières de placement non libérées,5,3,50,minimal,bilan,debit
+51,"Banques, établissements financiers et assimilés",5,2,5,minimal,bilan,mixte
+511,Valeurs à l'encaissement,5,3,51,minimal,bilan,debit
+5111,Coupons échus à l'encaissement,5,4,511,facultatif,bilan,debit
+5112,Chèques à encaisser,5,4,511,facultatif,bilan,debit
+5113,Effets à l'encaissement,5,4,511,facultatif,bilan,debit
+5114,Effets à l'escompte,5,4,511,facultatif,bilan,debit
+512,Banques,5,3,51,minimal,bilan,mixte
+5121,Comptes en euros,5,4,512,facultatif,bilan,mixte
+5124,Comptes en devises,5,4,512,facultatif,bilan,mixte
+517,Autres organismes financiers,5,3,51,minimal,bilan,mixte
+518,Intérêts courus,5,3,51,minimal,bilan,mixte
+5181,Intérêts courus à payer,5,4,518,facultatif,bilan,mixte
+5188,Intérêts courus à recevoir,5,4,518,facultatif,bilan,mixte
+519,Concours bancaires courants,5,3,51,minimal,bilan,credit
+5191,Crédit de mobilisation de créances commerciales,5,4,519,facultatif,bilan,credit
+5193,Mobilisation de créances nées à l'étranger,5,4,519,facultatif,bilan,credit
+5198,Intérêts courus sur concours bancaires courants,5,4,519,facultatif,bilan,credit
+52,Instruments financiers à terme et jetons détenus,5,2,5,minimal,bilan,mixte
+521,Instruments financiers à terme,5,3,52,minimal,bilan,mixte
+522,Jetons détenus,5,3,52,minimal,bilan,mixte
+523,Jetons auto-détenus,5,3,52,minimal,bilan,mixte
+524,Jetons empruntés,5,3,52,minimal,bilan,mixte
+53,Caisse,5,2,5,minimal,bilan,debit
+58,Virements internes,5,2,5,minimal,bilan,debit
+59,Dépréciations des comptes financiers,5,2,5,minimal,bilan,credit
+590,Dépréciations des valeurs mobilières de placement,5,3,59,minimal,bilan,credit
+5903,Actions,5,4,590,facultatif,bilan,credit
+5904,Autres titres conférant un droit de propriété,5,4,590,facultatif,bilan,credit
+5906,Obligations,5,4,590,facultatif,bilan,credit
+5908,Autres valeurs mobilières de placement et créances assimilées,5,4,590,facultatif,bilan,credit
+6,Comptes de charges,6,1,,minimal,gestion,debit
+60,Achats (sauf 603),6,2,6,minimal,gestion,debit
+601,Achats stockés - Matières premières et fournitures,6,3,60,minimal,gestion,debit
+602,Achats stockés - Autres approvisionnements,6,3,60,minimal,gestion,debit
+6021,Matières consommables,6,4,602,facultatif,gestion,debit
+6022,Fournitures consommables,6,4,602,facultatif,gestion,debit
+60221,Combustibles,6,5,6022,facultatif,gestion,debit
+60222,Produits d'entretien,6,5,6022,facultatif,gestion,debit
+60223,Fournitures d'atelier et d'usine,6,5,6022,facultatif,gestion,debit
+60224,Fournitures de magasin,6,5,6022,facultatif,gestion,debit
+60225,Fourniture de bureau,6,5,6022,facultatif,gestion,debit
+6026,Emballages,6,4,602,facultatif,gestion,debit
+60261,Emballages perdus,6,5,6026,facultatif,gestion,debit
+60262,Malis sur emballage,6,5,6026,facultatif,gestion,debit
+60265,Emballages récupérables non identifiables,6,5,6026,facultatif,gestion,debit
+60267,Emballages à usage mixte,6,5,6026,facultatif,gestion,debit
+603,Variation des stocks d'approvisionnements et de marchandises,6,3,60,minimal,gestion,mixte
+6031,Variation des stocks de matières premières et fournitures,6,4,603,minimal,gestion,mixte
+6032,Variation des stocks des autres approvisionnements,6,4,603,minimal,gestion,mixte
+6037,Variation des stocks de marchandises,6,4,603,minimal,gestion,mixte
+604,Achats d'études et prestations de services,6,3,60,minimal,gestion,debit
+605,"Achats de matériel, équipements et travaux",6,3,60,minimal,gestion,debit
+606,Achats non stockés de matière et fournitures,6,3,60,minimal,gestion,debit
+6061,"Fournitures non stockables (eau, énergie, etc.)",6,4,606,facultatif,gestion,debit
+6063,Fournitures d'entretien et de petit équipement,6,4,606,facultatif,gestion,debit
+6064,Fournitures administratives,6,4,606,facultatif,gestion,debit
+6068,Autres matières et fournitures,6,4,606,facultatif,gestion,debit
+607,Achats de marchandises,6,3,60,minimal,gestion,debit
+608,"(Compte réservé, le cas échéant, au regroupement des frais accessoires incorporés aux achats)",6,3,60,minimal,gestion,debit
+609,"Rabais, remises et ristournes obtenus sur achats (même ventilation que celle du compte 60)",6,3,60,minimal,gestion,credit
+6098,"Rabais, remises et ristournes non affectés",6,4,609,facultatif,gestion,credit
+61,Services extérieurs,6,2,6,minimal,gestion,debit
+611,Sous-traitance générale,6,3,61,minimal,gestion,debit
+612,Redevances de crédit-bail,6,3,61,minimal,gestion,debit
+6122,Crédit-bail mobilier,6,4,612,minimal,gestion,debit
+6125,Crédit-bail immobilier,6,4,612,minimal,gestion,debit
+613,Locations,6,3,61,minimal,gestion,debit
+6132,Locations immobilières,6,4,613,facultatif,gestion,debit
+6135,Locations mobilières,6,4,613,facultatif,gestion,debit
+614,Charges locatives et de copropriété,6,3,61,minimal,gestion,debit
+615,Entretien et réparation,6,3,61,minimal,gestion,debit
+6152,Entretien et réparation sur biens immobiliers,6,4,615,facultatif,gestion,debit
+6155,Entretien et réparation sur biens mobiliers,6,4,615,facultatif,gestion,debit
+6156,Maintenance,6,4,615,facultatif,gestion,debit
+616,Primes d'assurances,6,3,61,minimal,gestion,debit
+6161,Multirisques,6,4,616,facultatif,gestion,debit
+6162,Assurance obligatoire dommage construction,6,4,616,facultatif,gestion,debit
+6163,Assurance - transport,6,4,616,facultatif,gestion,debit
+61636,sur achats,6,5,6163,facultatif,gestion,debit
+61637,sur ventes,6,5,6163,facultatif,gestion,debit
+61638,sur autres biens,6,5,6163,facultatif,gestion,debit
+6164,Risques d'exploitation,6,4,616,facultatif,gestion,debit
+6165,Insolvabilité clients,6,4,616,facultatif,gestion,debit
+617,Études et recherches,6,3,61,minimal,gestion,debit
+618,Divers,6,3,61,minimal,gestion,debit
+6181,Documentation générale,6,4,618,facultatif,gestion,debit
+6183,Documentation technique,6,4,618,facultatif,gestion,debit
+6185,"Frais de colloques, séminaires, conférences",6,4,618,facultatif,gestion,debit
+619,"Rabais, remises et ristournes obtenus sur services extérieurs",6,3,61,minimal,gestion,credit
+62,Autres services extérieurs,6,2,6,minimal,gestion,debit
+621,Personnel extérieur à l'entité,6,3,62,minimal,gestion,debit
+6211,Personnel intérimaire,6,4,621,facultatif,gestion,debit
+6214,Personnel détaché ou prêté à l'entité,6,4,621,facultatif,gestion,debit
+622,Rémunérations d'intermédiaires et honoraires,6,3,62,minimal,gestion,debit
+6221,Commissions et courtages sur achats,6,4,622,facultatif,gestion,debit
+6222,Commissions et courtages sur ventes,6,4,622,facultatif,gestion,debit
+6224,Rémunérations des transitaires,6,4,622,facultatif,gestion,debit
+6225,Rémunérations d'affacturage,6,4,622,facultatif,gestion,debit
+6226,Honoraires,6,4,622,facultatif,gestion,debit
+6227,Frais d'actes et de contentieux,6,4,622,facultatif,gestion,debit
+6228,Divers,6,4,622,facultatif,gestion,debit
+623,"Publicité, publications, relations publiques",6,3,62,minimal,gestion,debit
+6231,Annonces et insertions,6,4,623,facultatif,gestion,debit
+6232,Échantillons,6,4,623,facultatif,gestion,debit
+6233,Foires et expositions,6,4,623,facultatif,gestion,debit
+6234,Cadeaux à la clientèle,6,4,623,facultatif,gestion,debit
+6235,Primes,6,4,623,facultatif,gestion,debit
+6236,Catalogues et imprimés,6,4,623,facultatif,gestion,debit
+6237,Publications,6,4,623,facultatif,gestion,debit
+6238,"Divers (pourboires, dons courants)",6,4,623,facultatif,gestion,debit
+624,Transports de biens et transports collectifs du personnel,6,3,62,minimal,gestion,debit
+6241,Transports sur achats,6,4,624,facultatif,gestion,debit
+6242,Transports sur ventes,6,4,624,facultatif,gestion,debit
+6243,Transports entre établissements ou chantiers,6,4,624,facultatif,gestion,debit
+6244,Transports administratifs,6,4,624,facultatif,gestion,debit
+6247,Transports collectifs du personnel,6,4,624,facultatif,gestion,debit
+6248,Divers,6,4,624,facultatif,gestion,debit
+625,"Déplacements, missions et réceptions",6,3,62,minimal,gestion,debit
+6251,Voyages et déplacements,6,4,625,facultatif,gestion,debit
+6255,Frais de déménagement,6,4,625,facultatif,gestion,debit
+6256,Missions,6,4,625,facultatif,gestion,debit
+6257,Réceptions,6,4,625,facultatif,gestion,debit
+626,Frais postaux et de télécommunications,6,3,62,minimal,gestion,debit
+627,Services bancaires et assimilés,6,3,62,minimal,gestion,debit
+6271,"Frais sur titres (achat, vente, garde)",6,4,627,facultatif,gestion,debit
+6272,Commissions et frais sur émission d'emprunts,6,4,627,facultatif,gestion,debit
+6275,Frais sur effets,6,4,627,facultatif,gestion,debit
+6276,Location de coffres,6,4,627,facultatif,gestion,debit
+6278,Autres frais et commissions sur prestations de services,6,4,627,facultatif,gestion,debit
+628,Divers,6,3,62,minimal,gestion,debit
+6281,Concours divers (cotisations),6,4,628,facultatif,gestion,debit
+6284,Frais de recrutement de personnel,6,4,628,facultatif,gestion,debit
+629,"Rabais, remises et ristournes obtenus sur autres services extérieurs",6,3,62,minimal,gestion,credit
+63,"Impôts, taxes et versements assimilés",6,2,6,minimal,gestion,debit
+631,"Impôts, taxes et versements assimilés sur rémunérations (administrations des impôts)",6,3,63,minimal,gestion,debit
+6311,Taxe sur les salaires,6,4,631,facultatif,gestion,debit
+6314,Cotisation pour défaut d'investissement obligatoire dans la construction,6,4,631,facultatif,gestion,debit
+6318,Autres,6,4,631,facultatif,gestion,debit
+633,"Impôts, taxes et versements assimilés sur rémunérations (autres organismes)",6,3,63,minimal,gestion,debit
+6331,Versement de transport,6,4,633,facultatif,gestion,debit
+6332,Allocations logement,6,4,633,facultatif,gestion,debit
+6333,Contribution unique des employeurs à la formation professionnelle,6,4,633,facultatif,gestion,debit
+6334,Participation des employeurs à l'effort de construction,6,4,633,facultatif,gestion,debit
+6335,Versements libératoires ouvrant droit à l'exonération de la taxe d'apprentissage,6,4,633,facultatif,gestion,debit
+6338,Autres,6,4,633,facultatif,gestion,debit
+635,"Autres impôts, taxes et versements assimilés (administrations des impôts)",6,3,63,minimal,gestion,debit
+6351,Impôts directs (sauf impôts sur les bénéfices),6,4,635,facultatif,gestion,debit
+63511,Contribution économique territoriale,6,5,6351,facultatif,gestion,debit
+63512,Taxes foncières,6,5,6351,facultatif,gestion,debit
+63513,Autres impôts locaux,6,5,6351,facultatif,gestion,debit
+63514,Taxe sur les véhicules des sociétés,6,5,6351,facultatif,gestion,debit
+6352,Taxe sur le chiffre d'affaires non récupérables,6,4,635,facultatif,gestion,debit
+6353,Impôts indirects,6,4,635,facultatif,gestion,debit
+6354,Droits d'enregistrement et de timbre,6,4,635,facultatif,gestion,debit
+63541,Droits de mutation,6,5,6354,facultatif,gestion,debit
+6358,Autres droits,6,4,635,facultatif,gestion,debit
+637,"Autres impôts, taxes et versements assimilés (autres organismes)",6,3,63,minimal,gestion,debit
+6371,Contribution sociale de solidarité à la charge des sociétés,6,4,637,facultatif,gestion,debit
+6372,Taxes perçues par les organismes publics internationaux,6,4,637,facultatif,gestion,debit
+6374,Impôts et taxes exigibles à l'étranger,6,4,637,facultatif,gestion,debit
+6378,Taxes diverses,6,4,637,facultatif,gestion,debit
+638,Rappel d’impôts (autres qu’impôts sur les bénéfices),6,3,63,minimal,gestion,debit
+64,Charges de personnel,6,2,6,minimal,gestion,debit
+641,Rémunérations du personnel,6,3,64,minimal,gestion,debit
+6411,"Salaires, appointements",6,4,641,facultatif,gestion,debit
+6412,Congés payés,6,4,641,facultatif,gestion,debit
+6413,Primes et gratifications,6,4,641,facultatif,gestion,debit
+6414,Indemnités et avantages divers,6,4,641,facultatif,gestion,debit
+6415,Supplément familial,6,4,641,facultatif,gestion,debit
+644,Rémunération du travail de l'exploitant,6,3,64,facultatif,gestion,debit
+645,Cotisations de sécurité sociale et de prévoyance,6,3,64,minimal,gestion,debit
+6451,Cotisations à l'Urssaf,6,4,645,facultatif,gestion,debit
+6452,Cotisations aux mutuelles,6,4,645,facultatif,gestion,debit
+6453,Cotisations aux caisses de retraites,6,4,645,facultatif,gestion,debit
+6454,Cotisations à Pôle emploi,6,4,645,facultatif,gestion,debit
+6458,Cotisations aux autres organismes sociaux,6,4,645,facultatif,gestion,debit
+646,Cotisations sociales personnelles de l'exploitant,6,3,64,facultatif,gestion,debit
+647,Autres cotisations sociales,6,3,64,minimal,gestion,debit
+6471,Prestations directes,6,4,647,facultatif,gestion,debit
+6472,Versements au comité social et économique,6,4,647,facultatif,gestion,debit
+6474,Versements aux autres œuvres sociales,6,4,647,facultatif,gestion,debit
+6475,"Médecine du travail, pharmacie",6,4,647,facultatif,gestion,debit
+648,Autres charges de personnel,6,3,64,minimal,gestion,debit
+649,Remboursements de charges de personnel,6,3,64,minimal,gestion,debit
+65,Autres charges de gestion courante,6,2,6,minimal,gestion,debit
+651,"Redevances pour concessions, brevets, licences, marques, procédés, solutions informatiques, droits et valeurs similaires",6,3,65,minimal,gestion,debit
+6511,"Redevances pour concessions, brevets, licences, marques, procédés, solutions informatiques",6,4,651,facultatif,gestion,debit
+6516,Droits d'auteur et de reproduction,6,4,651,facultatif,gestion,debit
+6518,Autres droits et valeurs similaires,6,4,651,facultatif,gestion,debit
+653,Rémunérations de l’activité des administrateurs et des gérants,6,3,65,minimal,gestion,debit
+654,Pertes sur créances irrécouvrables,6,3,65,minimal,gestion,debit
+6541,Créances de l'exercice,6,4,654,facultatif,gestion,debit
+6544,Créances des exercices antérieurs,6,4,654,facultatif,gestion,debit
+655,Quote-part de résultat sur opérations faites en commun,6,3,65,minimal,gestion,debit
+6551,Quote-part de bénéfice transférée - comptabilité du gérant,6,4,655,facultatif,gestion,debit
+6555,Quote-part de perte supportée - comptabilité des associés non gérants,6,4,655,facultatif,gestion,debit
+656,Pertes de change sur créances et dettes commerciales,6,3,65,minimal,gestion,debit
+657,Valeurs comptables des immobilisations incorporelles et corporelles cédées,6,3,65,minimal,gestion,debit
+658,Pénalités et autres charges,6,3,65,minimal,gestion,debit
+6581,Pénalités sur marchés (et dédits payés sur achats et ventes),6,4,658,facultatif,gestion,debit
+6582,"Pénalités, amendes fiscales et pénales",6,4,658,facultatif,gestion,debit
+6583,Malis provenant de clauses d’indexation,6,4,658,facultatif,gestion,debit
+6584,Lots,6,4,658,facultatif,gestion,debit
+6588,Opérations de constitution ou liquidation des fiducies,6,4,658,facultatif,gestion,debit
+66,Charges financières,6,2,6,minimal,gestion,debit
+661,Charges d'intérêts,6,3,66,minimal,gestion,debit
+6611,Intérêts des emprunts et dettes,6,4,661,facultatif,gestion,debit
+66116,Intérêts des emprunts et dettes assimilées,6,5,6611,facultatif,gestion,debit
+66117,Intérêts des dettes rattachées à des participations,6,5,6611,facultatif,gestion,debit
+6612,"Charges de la fiducie, résultat de la période",6,4,661,facultatif,gestion,debit
+6615,Intérêts des comptes courants et des dépôts créditeurs,6,4,661,facultatif,gestion,debit
+6616,Intérêts bancaires et sur opérations de financement (escompte…),6,4,661,facultatif,gestion,debit
+6617,Intérêts des obligations cautionnées,6,4,661,facultatif,gestion,debit
+6618,Intérêts des autres dettes,6,4,661,facultatif,gestion,debit
+66181,Intérêts des dettes commerciales,6,5,6618,facultatif,gestion,debit
+66188,Intérêts des dettes diverses,6,5,6618,facultatif,gestion,debit
+664,Pertes sur créances liées à des participations,6,3,66,minimal,gestion,debit
+665,Escomptes accordés,6,3,66,minimal,gestion,debit
+666,Pertes de change financières,6,3,66,minimal,gestion,debit
+667,Charges sur cession d’éléments financiers,6,3,66,minimal,gestion,debit
+6671,Valeurs comptables des immobilisations financières cédées,6,4,667,minimal,gestion,debit
+6672,Charges nettes sur cessions de titres immobilisés de l’activité de portefeuille,6,4,667,minimal,gestion,debit
+6673,Charges nettes sur cessions de valeurs mobilières de placement,6,4,667,minimal,gestion,debit
+6674,Charges nettes sur cessions de jetons,6,4,667,minimal,gestion,debit
+668,Autres charges financières,6,3,66,minimal,gestion,debit
+6683,Mali provenant du rachat par l’entité d’actions et obligations émises par elle- même,6,4,668,facultatif,gestion,debit
+67,Charges exceptionnelles,6,2,6,minimal,gestion,debit
+672,"(Compte à la disposition des entités pour enregistrer, en cours d'exercice, les charges sur exercices antérieurs)",6,3,67,minimal,gestion,debit
+678,Autres charges exceptionnelles,6,3,67,minimal,gestion,debit
+68,"Dotations aux amortissements, aux dépréciations et aux provisions",6,2,6,minimal,gestion,debit
+681,"Dotations aux amortissements, aux dépréciations et aux provisions (à inscrire dans les charges d'exploitation)",6,3,68,minimal,gestion,debit
+6811,Dotations aux amortissements sur immobilisations incorporelles et corporelles,6,4,681,minimal,gestion,debit
+68111,Immobilisations incorporelles et frais d’établissement,6,5,6811,facultatif,gestion,debit
+68112,Immobilisations corporelles,6,5,6811,facultatif,gestion,debit
+6815,Dotations aux provisions d'exploitation,6,4,681,minimal,gestion,debit
+6816,Dotations pour dépréciations des immobilisations incorporelles et corporelles,6,4,681,minimal,gestion,debit
+68161,Immobilisations incorporelles,6,5,6816,facultatif,gestion,debit
+68162,Immobilisations corporelles,6,5,6816,facultatif,gestion,debit
+6817,Dotations pour dépréciations des actifs circulants,6,4,681,minimal,gestion,debit
+68173,Stocks et en-cours,6,5,6817,facultatif,gestion,debit
+68174,Créances,6,5,6817,facultatif,gestion,debit
+686,"Dotations aux amortissements, aux dépréciations et aux provisions (à inscrire dans les charges financières)",6,3,68,minimal,gestion,debit
+6861,Dotations aux amortissements des primes de remboursement des emprunts,6,4,686,minimal,gestion,debit
+6862,Dotations aux amortissements des frais d'émission des emprunts,6,4,686,minimal,gestion,debit
+6865,Dotations aux provisions financières,6,4,686,minimal,gestion,debit
+6866,Dotations pour dépréciation des éléments financiers,6,4,686,minimal,gestion,debit
+68662,Immobilisations financières,6,5,6866,facultatif,gestion,debit
+68665,Valeurs mobilières de placement,6,5,6866,facultatif,gestion,debit
+687,"Dotations aux amortissements, aux dépréciations et aux provisions (à inscrire dans les charges exceptionnelles)",6,3,68,minimal,gestion,debit
+6871,Dotations aux amortissements exceptionnels des immobilisations,6,4,687,minimal,gestion,debit
+6872,Dotations aux provisions réglementées (immobilisations),6,4,687,minimal,gestion,debit
+68725,Amortissements dérogatoires,6,5,6872,facultatif,gestion,debit
+6873,Dotations aux provisions réglementées (stocks),6,4,687,minimal,gestion,debit
+6874,Dotations aux autres provisions réglementées,6,4,687,minimal,gestion,debit
+6875,Dotations aux provisions exceptionnelles,6,4,687,minimal,gestion,debit
+6876,Dotations pour dépréciations exceptionnelles,6,4,687,minimal,gestion,debit
+69,Participation des salariés - Impôts sur les bénéfices et assimilés,6,2,6,minimal,gestion,debit
+691,Participation des salariés aux résultats,6,3,69,minimal,gestion,debit
+695,Impôts sur les bénéfices,6,3,69,minimal,gestion,debit
+6951,Impôts dus en France,6,4,695,facultatif,gestion,debit
+6952,Contribution additionnelle à l'impôt sur les bénéfices,6,4,695,facultatif,gestion,debit
+6954,Impôts dus à l'étranger,6,4,695,facultatif,gestion,debit
+696,Suppléments d'impôt sur les sociétés liés aux distributions,6,3,69,minimal,gestion,debit
+698,Intégration fiscale,6,3,69,minimal,gestion,debit
+6981,Intégration fiscale - Charges,6,4,698,minimal,gestion,debit
+6989,Intégration fiscale - Produits,6,4,698,minimal,gestion,debit
+699,Produits - Reports en arrière des déficits,6,3,69,minimal,gestion,debit
+7,Comptes de produits,7,1,,minimal,gestion,credit
+70,"Ventes de produits fabriqués, prestations de services, marchandises",7,2,7,minimal,gestion,credit
+701,Ventes de produits finis,7,3,70,minimal,gestion,credit
+702,Ventes de produits intermédiaires,7,3,70,minimal,gestion,credit
+703,Ventes de produits résiduels,7,3,70,minimal,gestion,credit
+704,Travaux,7,3,70,minimal,gestion,credit
+705,Études,7,3,70,minimal,gestion,credit
+706,Prestations de services,7,3,70,minimal,gestion,credit
+707,Ventes de marchandises,7,3,70,minimal,gestion,credit
+708,Produits des activités annexes,7,3,70,minimal,gestion,credit
+7081,Produits des services exploités dans l'intérêt du personnel,7,4,708,facultatif,gestion,credit
+7082,Commissions et courtages,7,4,708,facultatif,gestion,credit
+7083,Locations diverses,7,4,708,facultatif,gestion,credit
+7084,Mise à disposition de personnel facturée,7,4,708,facultatif,gestion,credit
+7085,Ports et frais accessoires facturés,7,4,708,facultatif,gestion,credit
+7086,Bonis sur reprises d'emballages consignés,7,4,708,facultatif,gestion,credit
+7087,Bonifications obtenues des clients et primes sur ventes,7,4,708,facultatif,gestion,credit
+7088,Autres produits d'activités annexes (cessions d'approvisionnements),7,4,708,facultatif,gestion,credit
+709,"Rabais, remises et ristournes accordés",7,3,70,minimal,gestion,debit
+7091,"Rabais, remises et ristournes accordés sur ventes de produits finis",7,4,709,minimal,gestion,debit
+7092,"Rabais, remises et ristournes accordés sur ventes de produits intermédiaires",7,4,709,minimal,gestion,debit
+7094,"Rabais, remises et ristournes accordés sur travaux",7,4,709,minimal,gestion,debit
+7095,"Rabais, remises et ristournes accordés sur études",7,4,709,minimal,gestion,debit
+7096,"Rabais, remises et ristournes accordés sur prestations de services",7,4,709,minimal,gestion,debit
+7097,"Rabais, remises et ristournes accordés sur ventes de marchandises",7,4,709,minimal,gestion,debit
+7098,"Rabais, remises et ristournes accordés sur produits des activités annexes",7,4,709,minimal,gestion,debit
+71,Production stockée (ou déstockage),7,2,7,minimal,gestion,mixte
+713,Variation des stocks des en-cours de production et de produits,7,3,71,minimal,gestion,mixte
+7133,Variation des en-cours de production de biens,7,4,713,minimal,gestion,mixte
+71331,Produits en cours,7,5,7133,facultatif,gestion,mixte
+71335,Travaux en cours,7,5,7133,facultatif,gestion,mixte
+7134,Variation des en-cours de production de services,7,4,713,minimal,gestion,mixte
+71341,Études en cours,7,5,7134,facultatif,gestion,mixte
+71345,Prestations de services en cours,7,5,7134,facultatif,gestion,mixte
+7135,Variation des stocks de produits,7,4,713,minimal,gestion,mixte
+71351,Produits intermédiaires,7,5,7135,facultatif,gestion,mixte
+71355,Produits finis,7,5,7135,facultatif,gestion,mixte
+71358,Produits résiduels,7,5,7135,facultatif,gestion,mixte
+72,Production immobilisée,7,2,7,minimal,gestion,credit
+721,Immobilisations incorporelles,7,3,72,minimal,gestion,credit
+722,Immobilisations corporelles,7,3,72,minimal,gestion,credit
+74,Subventions,7,2,7,minimal,gestion,credit
+741,Subventions d’exploitation,7,3,74,minimal,gestion,credit
+742,Subventions d’équilibre,7,3,74,minimal,gestion,credit
+747,Quote-part des subventions d’investissement virée au résultat de l’exercice,7,3,74,minimal,gestion,credit
+75,Autres produits de gestion courante,7,2,7,minimal,gestion,credit
+751,"Redevances pour concessions, brevets, licences, marques, procédés, solutions informatiques, droits et valeurs similaires",7,3,75,minimal,gestion,credit
+7511,"Redevances pour concessions, brevets, licences, marques, procédés, solutions informatiques",7,4,751,facultatif,gestion,credit
+7516,Droits d'auteur et de reproduction,7,4,751,facultatif,gestion,credit
+7518,Autres droits et valeurs similaires,7,4,751,facultatif,gestion,credit
+752,Revenus des immeubles non affectés à des activités professionnelles,7,3,75,minimal,gestion,credit
+753,Rémunérations de l’activité des administrateurs et des gérants,7,3,75,minimal,gestion,credit
+754,Ristournes perçues des coopératives provenant des excédents,7,3,75,minimal,gestion,credit
+755,Quote-part de résultat sur opérations faites en commun,7,3,75,minimal,gestion,credit
+7551,Quote-part de perte transférée - comptabilité du gérant,7,4,755,facultatif,gestion,credit
+7555,Quote-part de bénéfice attribuée - comptabilité des associés non-gérants,7,4,755,facultatif,gestion,credit
+756,Gains de change sur créances et dettes commerciales,7,3,75,minimal,gestion,credit
+757,Produits des cessions d’immobilisations incorporelles et corporelles,7,3,75,minimal,gestion,credit
+758,Indemnités et autres produits,7,3,75,minimal,gestion,credit
+7581,Dédits et pénalités perçus sur achats et ventes,7,4,758,facultatif,gestion,credit
+7582,Libéralités reçues,7,4,758,facultatif,gestion,credit
+7583,Rentrées sur créances amorties,7,4,758,facultatif,gestion,credit
+7584,Dégrèvements d’impôts autres qu’impôts sur les bénéfices,7,4,758,facultatif,gestion,credit
+7585,Bonis provenant de clauses d’indexation,7,4,758,facultatif,gestion,credit
+7586,Lots,7,4,758,facultatif,gestion,credit
+7587,Indemnités d’assurance,7,4,758,facultatif,gestion,credit
+7588,Opérations de constitution ou liquidation des fiducies,7,4,758,facultatif,gestion,credit
+76,Produits financiers,7,2,7,minimal,gestion,credit
+761,Produits de participations,7,3,76,minimal,gestion,credit
+7611,Revenus des titres de participation,7,4,761,facultatif,gestion,credit
+7612,"Produits de la fiducie, résultat de la période",7,4,761,facultatif,gestion,credit
+7616,Revenus sur autres formes de participation,7,4,761,facultatif,gestion,credit
+7617,Revenus des créances rattachées à des participations,7,4,761,facultatif,gestion,credit
+762,Produits des autres immobilisations financières,7,3,76,minimal,gestion,credit
+7621,Revenus des titres immobilisés,7,4,762,facultatif,gestion,credit
+7626,Revenus des prêts,7,4,762,facultatif,gestion,credit
+7627,Revenus des créances immobilisées,7,4,762,facultatif,gestion,credit
+763,Revenus des autres créances,7,3,76,minimal,gestion,credit
+7631,Revenus des créances commerciales,7,4,763,facultatif,gestion,credit
+7638,Revenus des créances diverses,7,4,763,facultatif,gestion,credit
+764,Revenus des valeurs mobilières de placement,7,3,76,minimal,gestion,credit
+765,Escomptes obtenus,7,3,76,minimal,gestion,credit
+766,Gains de change financiers,7,3,76,minimal,gestion,credit
+767,Produits sur cession d’éléments financiers,7,3,76,minimal,gestion,credit
+7671,Produits des cessions d’immobilisations financières,7,4,767,minimal,gestion,credit
+7672,Produits nets sur cessions de titres immobilisés de l’activité de portefeuille,7,4,767,minimal,gestion,credit
+7673,Produits nets sur cessions de valeurs mobilières de placement,7,4,767,minimal,gestion,credit
+7674,Produits nets sur cessions de jetons,7,4,767,minimal,gestion,credit
+768,Autres produits financiers,7,3,76,minimal,gestion,credit
+7683,Bonis provenant du rachat par l’entreprise d’actions et d’obligations émises par elle-même,7,4,768,facultatif,gestion,credit
+77,Produits exceptionnels,7,2,7,minimal,gestion,credit
+772,"(Compte à la disposition des entités pour enregistrer, en cours d'exercice, les produits sur exercices antérieurs)",7,3,77,minimal,gestion,credit
+778,Autres produits exceptionnels,7,3,77,minimal,gestion,credit
+78,"Reprises sur amortissements, dépréciations et provisions",7,2,7,minimal,gestion,credit
+781,"Reprises sur amortissements, dépréciations et provisions (à inscrire dans les produits d'exploitation)",7,3,78,minimal,gestion,credit
+7811,Reprises sur amortissements des immobilisations incorporelles et corporelles,7,4,781,minimal,gestion,credit
+78111,Immobilisations incorporelles,7,5,7811,facultatif,gestion,credit
+78112,Immobilisations corporelles,7,5,7811,facultatif,gestion,credit
+7815,Reprises sur provisions d'exploitation,7,4,781,minimal,gestion,credit
+7816,Reprises sur dépréciations des immobilisations incorporelles et corporelles,7,4,781,minimal,gestion,credit
+78161,Immobilisations incorporelles,7,5,7816,facultatif,gestion,credit
+78162,Immobilisations corporelles,7,5,7816,facultatif,gestion,credit
+7817,Reprises sur dépréciations des actifs circulants,7,4,781,minimal,gestion,credit
+78173,Stocks et en-cours,7,5,7817,facultatif,gestion,credit
+78174,Créances,7,5,7817,facultatif,gestion,credit
+786,Reprises sur dépréciations et provisions (à inscrire dans les produits financiers),7,3,78,minimal,gestion,credit
+7865,Reprises sur provisions financières,7,4,786,minimal,gestion,credit
+7866,Reprises sur dépréciations des éléments financiers,7,4,786,minimal,gestion,credit
+78662,Immobilisations financières,7,5,7866,facultatif,gestion,credit
+78665,Valeurs mobilières de placement,7,5,7866,facultatif,gestion,credit
+787,Reprises sur dépréciations et provisions (à inscrire dans les produits exceptionnels),7,3,78,minimal,gestion,credit
+7872,Reprises sur provisions réglementées (immobilisations),7,4,787,minimal,gestion,credit
+78725,Amortissements dérogatoires,7,5,7872,facultatif,gestion,credit
+7873,Reprises sur provisions réglementées (stocks),7,4,787,minimal,gestion,credit
+7874,Reprises sur autres provisions réglementées,7,4,787,minimal,gestion,credit
+7875,Reprises sur provisions exceptionnelles,7,4,787,minimal,gestion,credit
+7876,Reprises sur dépréciations exceptionnelles,7,4,787,minimal,gestion,credit
+8,Comptes spéciaux,8,1,,minimal,special,mixte
+80,Engagements,8,2,8,minimal,special,mixte
+801,Engagements donnés par l'entité,8,3,80,minimal,special,mixte
+8011,"Avals, cautions, garanties",8,4,801,facultatif,special,mixte
+8014,Effets circulant sous l'endos de l'entité,8,4,801,facultatif,special,mixte
+8016,Redevances crédit-bail restant à courir,8,4,801,facultatif,special,mixte
+80161,Crédit-bail mobilier,8,5,8016,facultatif,special,mixte
+80165,Crédit-bail immobilier,8,5,8016,facultatif,special,mixte
+8018,Autres engagements donnés,8,4,801,facultatif,special,mixte
+802,Engagements reçus par l'entité,8,3,80,minimal,special,mixte
+8021,"Avals, cautions, garanties",8,4,802,facultatif,special,mixte
+8024,Créances escomptées non échues,8,4,802,facultatif,special,mixte
+8026,Engagements reçus pour utilisation en crédit-bail,8,4,802,facultatif,special,mixte
+80261,Crédit-bail mobilier,8,5,8026,facultatif,special,mixte
+80265,Crédit-bail immobilier,8,5,8026,facultatif,special,mixte
+8028,Autres engagements reçus,8,4,802,facultatif,special,mixte
+809,Contrepartie des engagements,8,3,80,minimal,special,mixte
+8091,Contrepartie 801,8,4,809,facultatif,special,mixte
+8092,Contrepartie 802,8,4,809,facultatif,special,mixte
+88,Résultat en instance d'affectation,8,2,8,minimal,special,mixte
+89,Bilan,8,2,8,minimal,special,mixte
+890,Bilan d'ouverture,8,3,89,minimal,special,mixte
+891,Bilan de clôture,8,3,89,minimal,special,mixte

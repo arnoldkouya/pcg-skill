@@ -1,0 +1,20 @@
+{
+  "name": "pcg-skill",
+  "owner": {
+    "name": "Arnold KOUYA",
+    "email": "arnoldkouya@gmail.com"
+  },
+  "metadata": {
+    "description": "Skill PCG français pour agents IA : plan comptable, balance, FEC, clôture."
+  },
+  "plugins": [
+    {
+      "name": "pcg-france",
+      "source": "./",
+      "description": "Comptabilité française (PCG) : plan comptable, imputation, contrôle de balance et de FEC, SIG et écritures de clôture.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "keywords": ["pcg", "comptabilité", "france", "fec"]
+    }
+  ]
+}

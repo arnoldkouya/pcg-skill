@@ -1,0 +1,11 @@
+JournalCode	JournalLib	EcritureNum	EcritureDate	CompteNum	CompteLib	CompAuxNum	CompAuxLib	PieceRef	PieceDate	EcritureLib	Debit	Credit	EcritureLet	DateLet	ValidDate	Montantdevise	Idevise
+ACH	Achats	1	20260110	607	Achats de marchandises			F-001	20260110	Achat marchandises	1000,00	0,00			20260110		
+ACH	Achats	1	20260110	44566	TVA déductible			F-001	20260110	Achat marchandises	200,00	0,00			20260110		
+ACH	Achats	1	20260110	401	Fournisseurs	FOURN1	Fournisseur Un	F-001	20260110	Achat marchandises	0,00	1200,00			20260110		
+VE	Ventes	2	20260115	411	Clients	CLI1	Client Un	V-001	20260115	Prestation	1200,00	0,00			20260115		
+VE	Ventes	2	20260115	706	Prestations de services			V-001	20260115	Prestation	0,00	1000,00			20260115		
+VE	Ventes	2	20260115	44571	TVA collectée			V-001	20260115	Prestation	0,00	200,00			20260115		
+BQ	Banque	3	20260131	512	Banques			B-001	20260131	Règlement client	1200,00	0,00			20260131		
+BQ	Banque	3	20260131	411	Clients	CLI1	Client Un	B-001	20260131	Règlement client	0,00	1200,00			20260131		
+OD	Opérations diverses	4	20261231	6811	Dotations aux amortissements			OD-001	20261231	Amortissement	500,00	0,00			20261231		
+OD	Opérations diverses	4	20261231	2813	Amortissements constructions			OD-001	20261231	Amortissement	0,00	500,00			20261231		

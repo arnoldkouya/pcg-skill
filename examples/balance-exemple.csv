@@ -1,0 +1,15 @@
+compte,libelle,debit,credit
+101,Capital,0,10000
+2183,Matériel de bureau et matériel informatique,6000,0
+401,Fournisseurs,0,4800
+411,Clients,7200,0
+44566,TVA sur autres biens et services,1200,0
+44571,TVA collectée,0,3000
+512,Banques,9000,0
+607,Achats de marchandises,3000,0
+616,Primes d'assurances,500,0
+6226,Honoraires,1000,0
+641,Rémunérations du personnel,4000,0
+645,Cotisations de sécurité sociale et de prévoyance,1800,0
+706,Prestations de services,0,11000
+707,Ventes de marchandises,0,4900
