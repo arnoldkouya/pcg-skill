@@ -1,29 +1,33 @@
 # pcg-skill
 
-Skill pour agents IA dédié à la comptabilité française selon le **Plan comptable général (PCG)** : plans 2023 à 2026 (861 comptes depuis la réforme de 2025), imputation, contrôle de balance et de FEC, résultat, soldes intermédiaires de gestion et écritures de clôture.
+**English** | [Français](README.fr.md)
 
-Un seul skill, installable sur **Claude** (Claude Code, claude.ai, Desktop), **Codex** et **ChatGPT**, car il suit le format ouvert Agent Skills (un dossier avec un fichier `SKILL.md`). Son équivalent pour l'espace OHADA est [syscohada-skill](https://github.com/arnoldkouya/syscohada-skill).
+AI agent skill for French accounting under the **Plan comptable général (PCG)**, the French national chart of accounts issued by the Autorité des normes comptables (ANC): charts from 2023 to 2026 (861 accounts since the 2025 reform), entry posting suggestions, trial balance and FEC checks, result calculation, intermediate management balances (SIG) and year-end closing entries. The FEC (Fichier des écritures comptables) is the standard French accounting entries export.
 
-## Ce que fait le skill
+One skill, installable on **Claude** (Claude Code, claude.ai, Desktop), **Codex** and **ChatGPT**, because it follows the open Agent Skills format (a folder with a `SKILL.md` file). Its counterpart for the OHADA area is [syscohada-skill](https://github.com/arnoldkouya/syscohada-skill).
 
-- **Plan comptable** : retrouver, expliquer et valider un compte (versions 2023 à 2026, selon la date d'ouverture de l'exercice), avec libellé, niveau, parent, système (minimal ou facultatif depuis 2025 ; abrégé, de base ou développé avant), sens usuel et chemin hiérarchique.
-- **Réforme 2025** (règlement ANC 2022-06) : le skill connaît les comptes supprimés (79, 675, 775, 777) et leurs remplaçants (649, 7587, 657, 757, 747), et la commande `diff` compare les années.
-- **Imputation** : proposer l'écriture d'une opération avec débit et crédit équilibrés et une justification par compte.
-- **Contrôle de balance et de FEC** : équilibre, codes inconnus, soldes à contre-sens, comptes d'attente non soldés, équilibre de chaque écriture du FEC, résultat provisoire.
-- **Clôture** : écritures d'inventaire (amortissements, dépréciations, provisions, stocks, charges à payer, produits à recevoir, régularisations, créances douteuses, cessions, impôt), TVA, soldes intermédiaires de gestion, bilan, compte de résultat, affectation du résultat.
-- **Exports** du plan en CSV, JSON ou Markdown.
+> **Language note:** the skill's instructions (`SKILL.md`), reference documents and the ChatGPT instructions are written in French, as is the accounting vocabulary of the chart of accounts. This README and the ChatGPT guide are available in English; translating the skill itself is a welcome contribution.
+
+## What the skill does
+
+- **Chart of accounts**: look up, explain and validate an account (versions 2023 to 2026, chosen by the date the financial year opened), with label, level, parent, system (minimal or optional since 2025; condensed, base or developed before), usual balance side and hierarchical path.
+- **2025 reform** (ANC regulation 2022-06): the skill knows the removed accounts (79, 675, 775, 777) and their replacements (649, 7587, 657, 757, 747), and the `diff` command compares years.
+- **Posting**: suggest the journal entry for a transaction, with balanced debit and credit and a one-line justification per account.
+- **Trial balance and FEC checks**: debit/credit balance, unknown codes, balances on the unusual side, suspense accounts not cleared, balance of every FEC entry, provisional result.
+- **Year-end closing**: adjusting entries (depreciation, impairment, provisions, inventory, accruals, deferrals, doubtful receivables, disposals, income tax), VAT, intermediate management balances, balance sheet, income statement, appropriation of the result.
+- **Exports** of the chart as CSV, JSON or Markdown.
 
 ## Installation
 
-| Plateforme | Méthode |
+| Platform | Method |
 |---|---|
-| Claude Code | Plugin ou script (voir ci-dessous) |
-| Claude (claude.ai, Desktop) | Importer `dist/pcg-france-skill.zip` dans les réglages des skills |
-| Codex | Script d'installation ou copie dans `~/.agents/skills/pcg-france` |
-| ChatGPT | Skill (bêta) ou GPT personnalisé : voir [chatgpt/README.md](chatgpt/README.md) |
-| Autre agent compatible Agent Skills | Copier `skills/pcg-france/` dans le dossier de skills de l'agent |
+| Claude Code | Plugin or script (see below) |
+| Claude (claude.ai, Desktop) | Import `dist/pcg-france-skill.zip` in the skills settings |
+| Codex | Install script, or copy into `~/.agents/skills/pcg-france` |
+| ChatGPT | Skill (beta) or custom GPT: see [chatgpt/README.en.md](chatgpt/README.en.md) |
+| Any other Agent Skills compatible agent | Copy `skills/pcg-france/` into the agent's skills folder |
 
-### Cloner le dépôt
+### Clone the repository
 
 ```bash
 git clone https://github.com/arnoldkouya/pcg-skill.git
@@ -32,18 +36,18 @@ cd pcg-skill
 
 ### Claude Code
 
-Par le plugin :
+With the plugin:
 
 ```text
 /plugin marketplace add arnoldkouya/pcg-skill
 /plugin install pcg-france@pcg-skill
 ```
 
-Ou par le script, qui copie le skill dans `~/.claude/skills/pcg-france` :
+Or with the script, which copies the skill into `~/.claude/skills/pcg-france`:
 
 ```bash
-scripts/install.sh claude            # pour tous vos projets
-scripts/install.sh claude --project  # pour le projet courant (.claude/skills)
+scripts/install.sh claude            # for all your projects
+scripts/install.sh claude --project  # for the current project (.claude/skills)
 ```
 
 ### Claude (claude.ai, Desktop)
@@ -52,33 +56,35 @@ scripts/install.sh claude --project  # pour le projet courant (.claude/skills)
 python3 scripts/build_zips.py
 ```
 
-Puis, dans les réglages de Claude, section des capacités ou des skills, importer `dist/pcg-france-skill.zip` (le dossier `pcg-france/` est à la racine de l'archive). L'intitulé exact du menu varie selon la version de l'application.
+Then, in Claude's settings (capabilities or skills section), import `dist/pcg-france-skill.zip` (the `pcg-france/` folder sits at the root of the archive). The exact menu name varies with the app version.
 
 ### Codex
 
 ```bash
 scripts/install.sh codex            # ~/.agents/skills/pcg-france
-scripts/install.sh codex --project  # .agents/skills du projet courant
+scripts/install.sh codex --project  # .agents/skills of the current project
 ```
 
-Sous Windows, utiliser `scripts\install.ps1 -Target codex` (ou `claude`, `all`, avec `-Project` pour le projet courant). Dans Codex, le skill s'active seul selon la description, ou en le nommant : `$pcg-france`.
+On Windows, use `scripts\install.ps1 -Target codex` (or `claude`, `all`, with `-Project` for the current project). In Codex the skill activates on its own based on its description, or by name: `$pcg-france`.
 
 ### ChatGPT
 
-Voir [chatgpt/README.md](chatgpt/README.md) : import comme skill (bêta, à activer dans l'espace de travail) ou GPT personnalisé avec `dist/pcg-france-gpt-pack.zip`.
+See [chatgpt/README.en.md](chatgpt/README.en.md): import as a skill (beta, to be enabled in the workspace) or a custom GPT with `dist/pcg-france-gpt-pack.zip`.
 
-## Exemples de demandes
+## Example requests
 
-- « Quel compte utiliser pour une prime d'assurance ? »
-- « Valide ces codes : 411 44571 9999 ABC »
-- « Qu'est-ce qui a changé dans le PCG en 2025 pour les cessions d'immobilisations ? »
-- « Voici ma balance, contrôle-la et donne le résultat. »
-- « Contrôle ce FEC avant l'envoi à mon expert-comptable. »
-- « Prépare les écritures de clôture : amortissements, charges à payer, impôt. »
+The skill is written in French; these are English renderings of the kind of request it handles.
 
-## Utiliser le script seul
+- "Which account should I use for an insurance premium?"
+- "Validate these codes: 411 44571 9999 ABC"
+- "What changed in the PCG in 2025 for asset disposals?"
+- "Here is my trial balance, check it and give me the result."
+- "Check this FEC before I send it to my accountant."
+- "Prepare the closing entries: depreciation, accruals, income tax."
 
-`skills/pcg-france/scripts/pcg.py` fonctionne sans l'agent (Python 3.8 ou plus, aucune dépendance) :
+## Using the script on its own
+
+`skills/pcg-france/scripts/pcg.py` works without any agent (Python 3.8 or later, no dependencies):
 
 ```bash
 python3 skills/pcg-france/scripts/pcg.py find 6811
@@ -87,63 +93,65 @@ python3 skills/pcg-france/scripts/pcg.py validate 411 44571 9999
 python3 skills/pcg-france/scripts/pcg.py tree 44 --depth 2
 python3 skills/pcg-france/scripts/pcg.py export --format csv --classe 6
 python3 skills/pcg-france/scripts/pcg.py diff                       # 2025 -> 2026
-python3 skills/pcg-france/scripts/pcg.py --annee 2024 find 675      # plan d'avant la réforme
-python3 skills/pcg-france/scripts/pcg.py diff --de 2024 --vers 2025 # effet de la réforme
+python3 skills/pcg-france/scripts/pcg.py --annee 2024 find 675      # pre-reform chart
+python3 skills/pcg-france/scripts/pcg.py diff --de 2024 --vers 2025 # effect of the reform
 python3 skills/pcg-france/scripts/pcg.py balance examples/balance-exemple.csv
 python3 skills/pcg-france/scripts/pcg.py fec examples/fec-exemple.txt
 ```
 
-- **Balance** : un CSV avec les colonnes `compte`, `debit`, `credit` (ou `solde`, positif au débit). Séparateurs `,`, `;` et tabulation, nombres au format `1 234,56` ou `1,234.56`, lignes de total ignorées. Les comptes de plus de 5 chiffres (comptes de l'entité) sont rattachés à leur préfixe du plan.
-- **FEC** : séparateur tabulation, barre verticale ou point-virgule, encodage UTF-8 ou Windows-1252 détectés. Colonnes requises : `CompteNum`, `Debit`, `Credit` ; `JournalCode` et `EcritureNum` pour le contrôle de chaque écriture.
-- Le code de sortie est 1 si la balance ou une écriture est déséquilibrée.
+Account labels are in French, so searches use French terms. `--annee` selects the chart year and `--de`/`--vers` the two years to compare.
 
-## Structure du dépôt
+- **Trial balance**: a CSV with the columns `compte` (account), `debit`, `credit` (or `solde`, positive on the debit side). The separators `,`, `;` and tab, and numbers written `1 234,56` or `1,234.56`, are accepted; total rows are ignored. Accounts longer than 5 digits (the company's own sub-accounts) are attached to their prefix in the chart.
+- **FEC**: tab, pipe or semicolon separator; UTF-8 or Windows-1252 encoding is detected. Required columns: `CompteNum`, `Debit`, `Credit`; `JournalCode` and `EcritureNum` for the per-entry balance check.
+- The exit code is 1 when the trial balance or an entry does not balance.
+
+## Repository layout
 
 ```text
 skills/pcg-france/
-├── SKILL.md                         # le skill
+├── SKILL.md                         # the skill
 ├── references/
-│   ├── plan-comptable-2026.csv      # 861 comptes
-│   ├── plan-comptable-2025.csv      # 861 comptes
-│   ├── plan-comptable-2024.csv      # 1025 comptes (avant la réforme)
+│   ├── plan-comptable-2026.csv      # 861 accounts
+│   ├── plan-comptable-2025.csv      # 861 accounts
+│   ├── plan-comptable-2024.csv      # 1025 accounts (before the reform)
 │   ├── plan-comptable-2023.csv
-│   └── cloture.md                   # réforme 2025, SIG, écritures d'inventaire, TVA, FEC
-└── scripts/pcg.py                   # recherche, validation, diff, balance, FEC
-.claude-plugin/                      # manifestes du plugin Claude Code
-chatgpt/                             # instructions et guide pour ChatGPT
+│   └── cloture.md                   # 2025 reform, SIG, adjusting entries, VAT, FEC
+└── scripts/pcg.py                   # search, validation, diff, trial balance, FEC
+.claude-plugin/                      # Claude Code plugin manifests
+chatgpt/                             # instructions and guide for ChatGPT
 scripts/                             # install.sh, install.ps1, build_zips.py, build_plan.py
 examples/                            # balance-exemple.csv, fec-exemple.txt
 tests/test_pcg.py
-NOTICE.md                            # sources et licences des données
-AGENTS.md                            # consignes pour les agents qui modifient ce dépôt
+NOTICE.md                            # data sources and licenses
+AGENTS.md                            # guidelines for agents that modify this repository
 ```
 
-## Développement
+## Development
 
 ```bash
 python3 -m unittest discover -s tests -v   # tests
-python3 scripts/build_zips.py              # archives dans dist/
-python3 scripts/build_plan.py CHEMIN_ARRHES_PCG              # régénérer les plans 2023 à 2026 (voir AGENTS.md)
+python3 scripts/build_zips.py              # archives in dist/
+python3 scripts/build_plan.py PATH_TO_ARRHES_PCG   # regenerate the 2023-2026 charts (see AGENTS.md)
 ```
 
-## Projets proches
+## Related projects
 
-- [arrhes/PCG](https://github.com/arrhes/PCG) : la source des données du plan, au format JSON (CC0).
-- [romainsimon/paperasse](https://github.com/romainsimon/paperasse) : un skill plus large sur la comptabilité, la fiscalité et la facturation françaises (TVA, liasse, facturation électronique). Ce dépôt-ci est plus étroit : plan comptable embarqué, contrôle de balance et de FEC, clôture.
+- [arrhes/PCG](https://github.com/arrhes/PCG): the source of the chart data, in JSON (CC0).
+- [romainsimon/paperasse](https://github.com/romainsimon/paperasse): a broader skill on French accounting, tax and invoicing (VAT, tax return package, e-invoicing). This repository is narrower: embedded chart of accounts, trial balance and FEC checks, closing.
 
-## Limites
+## Limitations
 
-- Les données viennent d'arrhes/PCG, établies à partir des textes de l'ANC (voir [NOTICE.md](NOTICE.md)). Pour une liasse destinée à l'administration, un dépôt de comptes ou un commissaire aux comptes, recouper avec le règlement ANC en vigueur.
-- Le sens usuel des comptes est un repère indicatif calculé par préfixe, pas le texte du PCG.
-- Les formules de SIG et les modèles d'états financiers sont une trame de travail, à aligner sur le système comptable de l'entité (base, abrégé, développé).
-- Aucun conseil fiscal : taux d'impôt sur les sociétés, régimes de TVA et formulaires de liasse changent chaque année et ne sont pas figés dans le skill.
-- Le skill ne couvre ni les plans sectoriels (associations, assurances), ni les normes IFRS.
-- Le résultat est un travail préparatoire qui doit être validé par un expert-comptable.
+- The data comes from arrhes/PCG, built from the ANC texts (see [NOTICE.md](NOTICE.md)). For a tax return package, a filing of accounts or a statutory auditor, cross-check against the ANC regulation in force.
+- The usual balance side of each account is an indicative marker computed by prefix, not the text of the PCG.
+- The SIG formulas and the financial statement layouts are a working framework, to be aligned with the company's accounting system (base, condensed, developed).
+- No tax advice: corporate tax rates, VAT regimes and tax return forms change every year and are not hard-coded in the skill.
+- The skill covers neither sector-specific charts (associations, insurers) nor IFRS.
+- The output is preparatory work and must be validated by a qualified accountant.
 
-## Sources de la réforme 2025
+## Sources for the 2025 reform
 
-Résumé établi à partir de la page [Cegid sur le nouveau plan comptable 2025](https://www.cegid.com/fr/blog/nouveau-plan-comptable-2025-nouveautes-application-tpe/) et du projet de règlement présenté par [Legifiscal](https://www.legifiscal.fr/actualites-fiscales/3087-comptabilite-reforme-resultat-exceptionnel-suppression-transferts-charges.html), puis recoupé avec le plan lui-même (comptes présents ou absents).
+Summary drawn from the [Cegid page on the new 2025 chart of accounts](https://www.cegid.com/fr/blog/nouveau-plan-comptable-2025-nouveautes-application-tpe/) and the draft regulation presented by [Legifiscal](https://www.legifiscal.fr/actualites-fiscales/3087-comptabilite-reforme-resultat-exceptionnel-suppression-transferts-charges.html), then cross-checked against the chart itself (accounts present or absent).
 
-## Licence
+## License
 
-MIT pour le code et les textes de ce dépôt, voir [LICENSE](LICENSE). Les données du plan ont leur propre régime, voir [NOTICE.md](NOTICE.md).
+MIT for the code and texts of this repository, see [LICENSE](LICENSE). The chart data has its own terms, see [NOTICE.md](NOTICE.md).
