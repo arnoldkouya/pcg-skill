@@ -11,12 +11,13 @@ Ce dépôt contient un seul skill, `skills/pcg-france/`, au format Agent Skills 
 - `scripts/pcg.py` n'utilise que la bibliothèque standard Python (3.8+). Ne pas ajouter de dépendance.
 - `chatgpt/instructions.md` doit rester sous 8 000 caractères (limite des GPT personnalisés).
 - Ne jamais figer de taux d'impôt, de régime de TVA ou de numéro de formulaire dans le skill : ces éléments changent chaque année.
+- `README.md` (anglais) et `README.fr.md` (français) disent la même chose : toute modification de l'un se répercute dans l'autre. Même règle pour `chatgpt/README.md` et `chatgpt/README.en.md`.
 
 ## Mise à jour annuelle du plan
 
 1. Récupérer la nouvelle version dans arrhes/PCG (`PCG/versions/AAAA/pcg_AAAA.json`).
 2. `python3 scripts/build_plan.py CHEMIN_DEPOT_ARRHES` (toutes les années) ou en précisant les années à générer.
-3. Passer `DEFAULT_YEAR` de `scripts/pcg.py` à la nouvelle année et mettre à jour les tests (effectifs, `diff`) et les mentions de millésime dans `SKILL.md` et le README.
+3. Passer `DEFAULT_YEAR` de `scripts/pcg.py` à la nouvelle année et mettre à jour les tests (effectifs, `diff`) et les mentions de millésime dans `SKILL.md` et dans les deux README.
 4. Relire `references/cloture.md` : chaque code cité doit exister dans le nouveau plan.
 
 ## Vérifications avant de livrer
