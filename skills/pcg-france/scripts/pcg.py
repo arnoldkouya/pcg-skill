@@ -489,6 +489,14 @@ def print_report(report, plan, extra=None):
 
 def cmd_balance(args, plan):
     entries, ignored = read_balance(Path(args.fichier))
+    if args.ecritures:
+        # Écritures de clôture : mêmes colonnes que la balance, ajoutées compte par compte.
+        extra, extra_ignored = read_balance(Path(args.ecritures))
+        for code, (debit, credit) in extra.items():
+            slot = entries.setdefault(code, [0.0, 0.0])
+            slot[0] += debit
+            slot[1] += credit
+        ignored = ignored + extra_ignored
     report = analyse(entries, ignored, plan)
     if args.json:
         print(json.dumps(report, ensure_ascii=False, indent=2))
@@ -564,6 +572,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = sub.add_parser("balance", help="Contrôler une balance (CSV) et calculer le résultat")
     p.add_argument("fichier")
     p.add_argument("--json", action="store_true")
+    p.add_argument("--ecritures", help="CSV d'écritures de clôture (mêmes colonnes que la balance) à ajouter avant le contrôle")
     p.set_defaults(func=cmd_balance)
 
     p = sub.add_parser("fec", help="Lire un FEC : balance reconstituée, contrôle des écritures, résultat")

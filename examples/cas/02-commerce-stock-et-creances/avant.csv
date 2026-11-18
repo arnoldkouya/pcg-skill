@@ -1,0 +1,13 @@
+compte,libelle,debit,credit
+101,Capital,0,15000
+164,Emprunts auprès des établissements de crédit,0,20000
+2182,Matériel de transport,20000,0
+37,Stocks de marchandises,5000,0
+411,Clients,25000,0
+401,Fournisseurs,0,9000
+512,Banque,15200,0
+707,Ventes de marchandises,0,80000
+607,Achats de marchandises,30000,0
+641,Rémunérations du personnel,20000,0
+645,Charges de sécurité sociale,8000,0
+661,Charges d'intérêts,800,0

@@ -99,6 +99,17 @@ python3 skills/pcg-france/scripts/pcg.py fec examples/fec-exemple.txt
 - **FEC** : séparateur tabulation, barre verticale ou point-virgule, encodage UTF-8 ou Windows-1252 détectés. Colonnes requises : `CompteNum`, `Debit`, `Credit` ; `JournalCode` et `EcritureNum` pour le contrôle de chaque écriture.
 - Le code de sortie est 1 si la balance ou une écriture est déséquilibrée.
 
+## Cas de test avec soldes de clôture connus
+
+Deux petites entreprises fictives, avec balance avant clôture, écritures de clôture et résultat attendu calculés à la main, permettent de vérifier le skill avant de lui faire confiance :
+
+```bash
+python3 skills/pcg-france/scripts/pcg.py balance examples/cas/01-societe-de-services/avant.csv --ecritures examples/cas/01-societe-de-services/ecritures.csv
+python3 -m unittest tests.test_cas -v
+```
+
+Détails, et règle de bilan utilisée, dans [examples/cas/README.fr.md](examples/cas/README.fr.md). Les chiffres sont inventés et n'ont pas été relus par un comptable : **si vous l'êtes, je serais ravi que vous les testiez et me fassiez un retour** (issue ou pull request).
+
 ## Structure du dépôt
 
 ```text
@@ -114,8 +125,8 @@ skills/pcg-france/
 .claude-plugin/                      # manifestes du plugin Claude Code
 chatgpt/                             # instructions et guide pour ChatGPT
 scripts/                             # install.sh, install.ps1, build_zips.py, build_plan.py
-examples/                            # balance-exemple.csv, fec-exemple.txt
-tests/test_pcg.py
+examples/                            # balance-exemple.csv, fec-exemple.txt, cas/ (cas de test)
+tests/test_pcg.py, tests/test_cas.py
 NOTICE.md                            # sources et licences des données
 AGENTS.md                            # consignes pour les agents qui modifient ce dépôt
 ```
