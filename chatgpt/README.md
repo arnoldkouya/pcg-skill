@@ -1,5 +1,7 @@
 # Utiliser le skill dans ChatGPT
 
+[English](README.en.md) | **Français**
+
 Deux voies. La première est la plus simple si les skills sont activés dans votre espace de travail ; la seconde fonctionne avec un GPT personnalisé.
 
 ## Voie 1 : skill ChatGPT (bêta)
