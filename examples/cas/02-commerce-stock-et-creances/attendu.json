@@ -1,0 +1,31 @@
+{
+  "cas": "Société de négoce : variation de stock, dépréciation de créance, intérêts courus, amortissement",
+  "avertissement": "Chiffres fictifs calculés à la main. À faire relire par un comptable.",
+  "total_debit_apres": 141700,
+  "total_credit_apres": 141700,
+  "charges_classe6": 62500,
+  "produits_classe7": 80000,
+  "resultat": 17500,
+  "total_actif_net": 62000,
+  "total_passif_avec_resultat": 62000,
+  "soldes_apres": {
+    "101": -15000,
+    "164": -20000,
+    "1688": -500,
+    "2182": 20000,
+    "2818": -4000,
+    "37": 7000,
+    "401": -9000,
+    "411": 25000,
+    "491": -1200,
+    "512": 15200,
+    "6037": -2000,
+    "607": 30000,
+    "641": 20000,
+    "645": 8000,
+    "661": 1300,
+    "6811": 4000,
+    "6817": 1200,
+    "707": -80000
+  }
+}

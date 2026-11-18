@@ -12,6 +12,7 @@ Ce dépôt contient un seul skill, `skills/pcg-france/`, au format Agent Skills 
 - `chatgpt/instructions.md` doit rester sous 8 000 caractères (limite des GPT personnalisés).
 - Ne jamais figer de taux d'impôt, de régime de TVA ou de numéro de formulaire dans le skill : ces éléments changent chaque année.
 - `README.md` (anglais) et `README.fr.md` (français) disent la même chose : toute modification de l'un se répercute dans l'autre. Même règle pour `chatgpt/README.md` et `chatgpt/README.en.md`.
+- Chaque cas de `examples/cas/` doit rester équilibré, n'utiliser que des codes présents dans le plan, et avoir un `attendu.json` cohérent avec `avant.csv` + `ecritures.csv` (vérifié par `tests/test_cas.py`). Les chiffres sont fictifs ; ne jamais présenter un cas comme relu par un comptable tant que ce n'est pas vrai.
 
 ## Mise à jour annuelle du plan
 

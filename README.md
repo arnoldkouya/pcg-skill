@@ -105,6 +105,17 @@ Account labels are in French, so searches use French terms. `--annee` selects th
 - **FEC**: tab, pipe or semicolon separator; UTF-8 or Windows-1252 encoding is detected. Required columns: `CompteNum`, `Debit`, `Credit`; `JournalCode` and `EcritureNum` for the per-entry balance check.
 - The exit code is 1 when the trial balance or an entry does not balance.
 
+## Test cases with known closing balances
+
+Two small fictional companies, with trial balance before closing, closing entries and the expected result worked out by hand, let you check the skill before trusting it:
+
+```bash
+python3 skills/pcg-france/scripts/pcg.py balance examples/cas/01-societe-de-services/avant.csv --ecritures examples/cas/01-societe-de-services/ecritures.csv
+python3 -m unittest tests.test_cas -v
+```
+
+Details, and the rule used for the balance sheet, in [examples/cas/README.md](examples/cas/README.md). The figures are invented and have not been reviewed by an accountant: **if you are one, I would be glad if you tested them and sent feedback** (an issue or a pull request).
+
 ## Repository layout
 
 ```text
@@ -120,8 +131,8 @@ skills/pcg-france/
 .claude-plugin/                      # Claude Code plugin manifests
 chatgpt/                             # instructions and guide for ChatGPT
 scripts/                             # install.sh, install.ps1, build_zips.py, build_plan.py
-examples/                            # balance-exemple.csv, fec-exemple.txt
-tests/test_pcg.py
+examples/                            # balance-exemple.csv, fec-exemple.txt, cas/ (test cases)
+tests/test_pcg.py, tests/test_cas.py
 NOTICE.md                            # data sources and licenses
 AGENTS.md                            # guidelines for agents that modify this repository
 ```
